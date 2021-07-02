@@ -1,5 +1,5 @@
-# WordPress Tailwind Starter Theme
-A minimalistic WordPress starter theme, based on Tailwind and PurgeCSS.
+# 73k WordPress Bootstrap 5/PurgeCSS Theme
+The WordPress theme for 73k.us, based on Bootstrap 5 and PurgeCSS.
 
 ## Requirements
 - [NodeJS](https://nodejs.org)
@@ -25,8 +25,8 @@ npm run build
 ```
 This will run both a production and development set of webpack tasks. The enqueue hook will load the correct version of the JS file, based on whether your development/staging server's `SCRIPT_DEBUG` constant is set to `true`.
 
-## Tailwind
-Using the `tailwind.js` file, you can customize Tailwind's default styles before things get compiled. For more information on configuration, [see detailed documentation on Tailwind](https://tailwindcss.com/).
+## Bootstrap
+You can customize Bootstrap SCSS & JavaScript imports in the `assets/css/app.scss` and `assets/js/main.js` files.
 
 ## PurgeCSS
-*WP Tailwind* uses PurgeCSS to remove unused styles from the production build. It scans your project directory for strings that match SCSS declarations. You can modify the directories to search for in the `webpack.config.js` file. **Always check your production build to make sure styles you were developing with compiled correctly.**
+*WP 73k* uses PurgeCSS to remove unused styles from the production build. It scans your project directory for strings that match SCSS declarations. You can modify the directories to search for in the `webpack.config.js` file. **Always check your production build to make sure styles you were developing with compiled correctly.**

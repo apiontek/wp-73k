@@ -13,7 +13,6 @@ let prefix = isProduction ? '.min' : '';
 // Set the PostCSS Plugins.
 const post_css_plugins = [
 	require('postcss-import'),
-	require('tailwindcss')('./tailwind.js'),
 	require('postcss-nested'),
 	require('postcss-custom-properties'),
 	require('autoprefixer')
@@ -28,12 +27,8 @@ if ( isProduction ) {
 				'./src/**/*.php',
 				'./page-templates/*.php',
 				'./assets/images/**/*.svg',
-				'./assets/scss/whitelist/*.css',
 				'./../../mu-plugins/app/src/components/**/*.php',
 			],
-			// css: [
-			// 	'./node_modules/tailwindcss/dist/base.css'
-			// ],
 			// Use Extractor configuration from Tailwind Docs
 			// https://tailwindcss.com/docs/controlling-file-size#setting-up-purge-css-manually
 			defaultExtractor: content => {
