@@ -21,7 +21,6 @@ const post_css_plugins = [
 
 // Add PurgeCSS for production builds.
 if ( isProduction ) {
-	post_css_plugins.push(require('cssnano'));
 	post_css_plugins.push(
 		PurgeCSS({
 			content: [
@@ -32,9 +31,9 @@ if ( isProduction ) {
 				'./assets/scss/whitelist/*.css',
 				'./../../mu-plugins/app/src/components/**/*.php',
 			],
-			css: [
-				'./node_modules/tailwindcss/dist/base.css'
-			],
+			// css: [
+			// 	'./node_modules/tailwindcss/dist/base.css'
+			// ],
 			// Use Extractor configuration from Tailwind Docs
 			// https://tailwindcss.com/docs/controlling-file-size#setting-up-purge-css-manually
 			defaultExtractor: content => {
@@ -74,28 +73,11 @@ const config = {
       {
         test: /\.[s]?css$/,
         use: [
-					MiniCssExtractPlugin.loader,
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 1,
-							sourceMap: ! isProduction
-						}
-					},
-					{
-						loader: 'sass-loader'
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							sourceMap: isProduction || false,
-							postcssOptions: {
-                parser: require("postcss-scss"),
-                plugins: post_css_plugins,
-              }
-						},
-					}
-				],
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+          "postcss-loader",
+        ],
 			}
 		]
 	},
@@ -110,9 +92,7 @@ const config = {
 		}
 	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: `[name]${prefix}.css`,
-		}),
+		new MiniCssExtractPlugin({ filename: `[name]${prefix}.css` }),
 		new CopyWebpackPlugin({
 			patterns: [{
                         	from: './assets/images/',

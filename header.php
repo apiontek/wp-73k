@@ -44,7 +44,7 @@ namespace WP_73k;
 				$tag = 'h1';
 			}
 
-			printf( '<%1$s class="text-h1 m-0"><a class="text-xl no-underline uppercase" href="%2$s" rel="home">%3$s</a></%1$s>',
+			printf( '<%1$s class="h1 m-0"><a class="text-xl no-underline uppercase" href="%2$s" rel="home">%3$s</a></%1$s>',
 				$tag,
 				esc_url( home_url( '/' ) ),
 				esc_html( get_bloginfo( 'name' ) )

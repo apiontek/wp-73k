@@ -19,7 +19,7 @@ namespace WP_73k;
 					<div class="lg:flex lg:justify-between">
 						<div class="lg:w-1/4 text-center lg:text-left">
 							<div class="text-xl">
-								<p class="text-sm">WP Tailwind is a utility-first starter theme for WordPress by <a href="https://www.freeshifter.com">Freeshifter LLC</a> and is totally free! <a href="https://www.github.com/freeshifter/wp-73k">Contribute on GitHub</a></a></p>
+								<p class="text-sm">73k.us is &copy; 2021 by Adam Piontek</p>
 							</div>
 						</div>
 					</div>
