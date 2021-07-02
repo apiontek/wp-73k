@@ -9,7 +9,7 @@
  * @package Freeshifter
  */
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

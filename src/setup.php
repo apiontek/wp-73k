@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 /**
  * Set up theme defaults and registers support for various WordPress features.
@@ -21,8 +21,8 @@ add_action( 'after_setup_theme', function () {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( [
-		'primary' => __( 'Primary Menu', 'wp-tailwind' ),
-		'footer'  => __( 'Footer Menu', 'wp-tailwind' ),
+		'primary' => __( 'Primary Menu', 'wp-73k' ),
+		'footer'  => __( 'Footer Menu', 'wp-73k' ),
 	] );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.

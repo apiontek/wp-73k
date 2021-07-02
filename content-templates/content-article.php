@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 ?>
 <article <?php post_class( 'bg-white border-2 border-gray-400 p-8' ); ?> itemscope itemtype="https://schema.org/CreativeWork">

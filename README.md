@@ -6,11 +6,11 @@ A minimalistic WordPress starter theme, based on Tailwind and PurgeCSS.
 - [Composer](https://getcomposer.org)
 
 ## How to get started
-1. Clone or [download](https://github.com/freeshifter/wp-tailwind/archive/master.zip "Download the WP Tailwind Zip") the project onto your `themes` directory `(./wp-content/themes)`
+1. Clone or [download](https://github.com/freeshifter/wp-73k/archive/master.zip "Download the WP Tailwind Zip") the project onto your `themes` directory `(./wp-content/themes)`
 2. Run a find/replace for the following strings:
-- `wp-tailwind`
-- `WP_Tailwind`
-- `wp_tailwind_`
+- `wp-73k`
+- `WP_73k`
+- `wp_73k_`
 3. Run `composer install`
 4. Run `npm install` 
 5. Update the BrowserSyncPlugin configuration in `webpack.config.js` to the domain of your local installation.

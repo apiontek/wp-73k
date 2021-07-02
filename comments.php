@@ -27,7 +27,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			printf(
-				esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wp-tailwind' ) ),
+				esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wp-73k' ) ),
 				number_format_i18n( get_comments_number() ),
 				'<span>' . get_the_title() . '</span>'
 			);
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above" class="navigation comment-navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-tailwind' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-73k' ); ?></h2>
 				<div class="nav-links">
 					<div class="nav-previous"><?php previous_comments_link( esc_html( 'Older Comments' ) ); ?></div>
 					<div class="nav-next"><?php next_comments_link( esc_html( 'Newer Comments' ) ); ?></div>
@@ -57,7 +57,7 @@ if ( post_password_required() ) {
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-below" class="navigation comment-navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-tailwind' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-73k' ); ?></h2>
 				<div class="nav-links">
 					<div class="nav-previous"><?php previous_comments_link( esc_html( 'Older Comments' ) ); ?></div>
 					<div class="nav-next"><?php next_comments_link( esc_html( 'Newer Comments' ) ); ?></div>

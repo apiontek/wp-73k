@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 /**
  * Register widget area.

@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 add_filter( 'body_class', function( $classes ) {
 

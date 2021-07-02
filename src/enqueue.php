@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 /**
  * Enqueue scripts and styles
@@ -11,19 +11,19 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	// JS
 	wp_enqueue_script(
-		'wp_tailwind_js',
-		WP_Tailwind_URL . "/dist/main{$min_ext}.js",
+		'wp_73k_js',
+		WP_73k_URL . "/dist/main{$min_ext}.js",
 		[],
-		WP_Tailwind_VERSION,
+		WP_73k_VERSION,
 		true
 	);
 
 	// CSS
 	wp_enqueue_style(
-		'wp_tailwind_css',
-		WP_Tailwind_URL . "/dist/main{$min_ext}.css",
+		'wp_73k_css',
+		WP_73k_URL . "/dist/main{$min_ext}.css",
 		[],
-		WP_Tailwind_VERSION,
+		WP_73k_VERSION,
 		''
 	);
 

@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Tailwind;
+namespace WP_73k;
 
 get_header(); ?>
 	<div class="container mx-auto relative z-10 mb-16 lg:mb-32 flex items-start">
