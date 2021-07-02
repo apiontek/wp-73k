@@ -1,7 +1,7 @@
 {
 	"name": "wp-73k-theme",
 	"version": "1.0.1",
-	"description": "WP Tailwind",
+	"description": "WP 73k",
 	"main": "./assets/js/main.js",
 	"scripts": {
 		"start": "cross-env NODE_ENV=development SERVER=true webpack --watch",
@@ -10,45 +10,56 @@
 		"prod": "cross-env NODE_ENV=production webpack",
 		"build": "concurrently \"npm run prod\" \"npm run dev\""
 	},
-	"devDependencies": {
-		"@babel/core": "^7.10.5",
-		"@babel/polyfill": "^7.10.4",
-		"@babel/preset-env": "^7.10.4",
-		"@fullhuman/postcss-purgecss": "^2.3.0",
-		"autoprefixer": "^9.8.5",
-		"babel-loader": "^8.1.0",
-		"browser-sync": "^2.26.10",
-		"browser-sync-webpack-plugin": "^2.2.2",
-		"concurrently": "^5.2.0",
-		"copy-webpack-plugin": "^6.0.3",
-		"cross-env": "^7.0.2",
-		"css-loader": "^3.6.0",
-		"cssnano": "^4.1.10",
-		"imagemin-webpack-plugin": "^2.4.2",
-		"mini-css-extract-plugin": "^0.9.0",
-		"postcss-loader": "^3.0.0",
-		"resolve-url-loader": "^3.1.1",
-		"style-loader": "^1.2.1",
-		"tailwindcss": "^1.5.2",
-		"uglifyjs-webpack-plugin": "^2.2.0",
-		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.12"
-	},
 	"dependencies": {
+    "@fontsource/jetbrains-mono": "^4.2.2",
+    "@fontsource/open-sans": "^4.2.2",
+    "@fontsource/righteous": "^4.x",
+    "@fontsource/source-serif-pro": "^4.2.3",
+    "@mdi/svg": "^5.x",
+    "@popperjs/core": "^2.x",
+    "bootstrap": "^5.x",
+    "bootstrap-icons": "^1.x",
+    "hamburgers": "^1.x",
 		"postcss-custom-properties": "^9.1.1",
 		"postcss-import": "^12.0.1",
 		"postcss-nested": "^4.2.3",
 		"regenerator": "^0.14.7"
 	},
+	"devDependencies": {
+    "@babel/core": "^7.x",
+    "@babel/preset-env": "^7.x",
+		"@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^10.x",
+    "babel-loader": "^8.x",
+		"browser-sync": "^2.26.10",
+		"browser-sync-webpack-plugin": "^2.2.2",
+		"concurrently": "^5.2.0",
+    "copy-webpack-plugin": "^9.x",
+		"cross-env": "^7.0.2",
+    "css-loader": "^5.x",
+    "css-minimizer-webpack-plugin": "^3.x",
+		"cssnano": "^4.1.10",
+		"imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^1.x",
+    "postcss": "^8.2.6",
+    "postcss-loader": "^5.0.0",
+    "postcss-scss": "^3.0.4",
+    "sass": "^1.x",
+    "sass-loader": "^12.x",
+		"tailwindcss": "^1.5.2",
+    "webpack": "^5.x",
+    "webpack-cli": "^4.x"
+	},
 	"browserslist": [
-		"> 1%",
-		"last 2 versions",
-		"not ie <= 11"
+    "defaults",
+    "not dead",
+    "last 3 versions",
+    "not ie <= 11"
 	],
 	"engines": {
-		"node": ">=10.5.0",
-		"npm": ">=6.4.1"
+		"node": ">=14.0.0",
+		"npm": ">=7.0.1"
 	},
-	"author": "",
+	"author": "Adam Piontek",
 	"license": "ISC"
 }

@@ -4,7 +4,7 @@ const CopyWebpackPlugin    = require('copy-webpack-plugin');
 const ImageminPlugin       = require('imagemin-webpack-plugin').default;
 const BrowserSyncPlugin    = require('browser-sync-webpack-plugin');
 const PurgeCSS             = require('@fullhuman/postcss-purgecss');
-const UglifyJsPlugin       = require("uglifyjs-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const isProduction         = 'production' === process.env.NODE_ENV;
 
 // Set the build prefix.
@@ -53,24 +53,15 @@ if ( isProduction ) {
 
 const config = {
 	entry: './assets/js/main.js',
-	optimization: {
-		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
-				parallel: true,
-				sourceMap: true
-			})
-		]
-	},
 	output: {
 		filename: `[name]${prefix}.js`,
 		path: path.resolve(__dirname, 'dist')
 	},
-	mode: process.env.NODE_ENV,
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
+        exclude: /node_modules/,
 				loader: 'babel-loader',
 				options: {
 					presets: [
@@ -80,9 +71,9 @@ const config = {
 					]
 				}
 			},
-			{
-				test: /\.css$/,
-				use: [
+      {
+        test: /\.[s]?css$/,
+        use: [
 					MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
@@ -92,17 +83,26 @@ const config = {
 						}
 					},
 					{
+						loader: 'sass-loader'
+					},
+					{
 						loader: 'postcss-loader',
 						options: {
-							ident: 'postcss',
-							sourceMap: isProduction || 'inline',
-							plugins: post_css_plugins,
+							sourceMap: isProduction || false,
+							postcssOptions: {
+                parser: require("postcss-scss"),
+                plugins: post_css_plugins,
+              }
 						},
 					}
 				],
 			}
 		]
 	},
+	optimization: {
+		minimizer: ["...", new CssMinimizerPlugin()],
+	},
+	mode: process.env.NODE_ENV,
 	resolve: {
 		alias: {
 			'@'      : path.resolve('assets'),
