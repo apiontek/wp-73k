@@ -27,17 +27,23 @@ namespace WP_73k;
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
   <div class="container-fluid">
 
+    <h1 class="my-0 py-0 lh-base">
+      <?php
+        printf( '<a class="navbar-brand fs-1 text-secondary" href="%1$s" rel="home">',
+          esc_url( home_url( '/' ) )
+        );
+
+        svg_icon_use("mdi-desktop-classic", "icon baseline");
+
+        printf( ' <span class="fw-light font-brand">\\\\%1$s</span>',
+          esc_html( get_bloginfo( 'name' ) )
+        );
+
+        echo "</a>";
+      ?>
+    </h1>
+
     <?php
-			$tag = 'p';
-			if ( is_front_page() || is_home() ) {
-				$tag = 'h1';
-			}
-
-			printf( '<h1 class="my-0 py-0 lh-base"><a class="navbar-brand fs-1 text-secondary" href="%1$s" rel="home"><span class="fw-light font-brand">\\\\%2$s</span></a></h1>',
-				esc_url( home_url( '/' ) ),
-				esc_html( get_bloginfo( 'name' ) )
-			);
-
 			if ( has_nav_menu( 'primary' ) ) {
 				wp_nav_menu([
 					'theme_location'  => 'primary',
@@ -66,25 +72,26 @@ namespace WP_73k;
 	<header class="header">
 		<div class="container mx-auto">
 			<?php
-			$tag = 'p';
-			if ( is_front_page() || is_home() ) {
-				$tag = 'h1';
-			}
+			// $tag = 'p';
+			// if ( is_front_page() || is_home() ) {
+			// 	$tag = 'h1';
+			// }
 
-			printf( '<%1$s class="h1 m-0"><a class="text-xl no-underline uppercase" href="%2$s" rel="home">%3$s</a></%1$s>',
-				$tag,
-				esc_url( home_url( '/' ) ),
-				esc_html( get_bloginfo( 'name' ) )
-			);
+			// printf( '<%1$s class="h1 m-0"><a class="text-xl no-underline uppercase" href="%2$s" rel="home">%3$s</a></%1$s>',
+			// 	$tag,
+			// 	esc_url( home_url( '/' ) ),
+			// 	esc_html( get_bloginfo( 'name' ) )
+			// );
 
-			if ( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu([
-					'theme_location'  => 'primary',
-					'container'       => 'nav',
-					'container_class' => 'nav-primary ml-auto',
-					'menu_class'      => 'list-reset m-0 md:flex md:justify-end md:items-center'
-				]);
-			} ?>
+			// if ( has_nav_menu( 'primary' ) ) {
+			// 	wp_nav_menu([
+			// 		'theme_location'  => 'primary',
+			// 		'container'       => 'nav',
+			// 		'container_class' => 'nav-primary ml-auto',
+			// 		'menu_class'      => 'list-reset m-0 md:flex md:justify-end md:items-center'
+			// 	]);
+			// }
+      ?>
 			<div class="menu-item">
 				<button class="toggle highlight">Menu</button>
 			</div>
