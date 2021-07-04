@@ -7,7 +7,11 @@
 /*SVG ICON SYSTEM*/
 @import "svg-icons";
 
+/* Navbar toggler icon override */
+@import "nav-burger";
 
+/* Navbar custom styling */
+@import "nav-bar-help";
 
 /* main */
 html,
@@ -39,6 +43,11 @@ a {
     }
   }
 }
+
+/* navbar menus */
+// nav.navbar ul.navbar-nav li.menu-item
+
+/* more */
 .border-gray-900 {
   border-color: $gray-900 !important;
 }
@@ -82,3 +91,4 @@ a {
   padding-top: 2px;
   padding-bottom: 2px;
 }
+

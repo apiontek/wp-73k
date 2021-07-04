@@ -14,12 +14,12 @@ namespace WP_73k;
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri() . '/assets/images/favicon.png'; ?>">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php wp_head(); ?>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri() . '/assets/images/favicon.png'; ?>">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
@@ -33,7 +33,7 @@ namespace WP_73k;
           esc_url( home_url( '/' ) )
         );
 
-        svg_icon_use("mdi-desktop-classic", "icon baseline");
+        echo svg_icon_use("mdi-desktop-classic", "icon baseline");
 
         printf( ' <span class="fw-light font-brand">\\\\%1$s</span>',
           esc_html( get_bloginfo( 'name' ) )
@@ -43,59 +43,35 @@ namespace WP_73k;
       ?>
     </h1>
 
-    <?php
-			if ( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu([
-					'theme_location'  => 'primary',
-					'container'       => 'nav',
-					'container_class' => 'nav-primary ml-auto',
-					'menu_class'      => 'list-reset m-0 md:flex md:justify-end md:items-center'
-				]);
-			} ?>
+    <button class="hamburger hamburger--vortex collapsed navbar-toggler" id="navbarSupportedContentToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger-box d-flex">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <?php
+        if ( has_nav_menu( 'primary' ) ) {
+          wp_nav_menu([
+            'theme_location'  => 'primary',
+            'depth' => 1,
+            'menu'  => 'primary',
+            'container'       => '',
+            'container_class' => '',
+            'menu_class'      => 'navbar-nav ms-auto',
+            'menu_item_class' => 'nav-item',
+            'link_class'      => 'nav-link font-monospace fs-6'
+            // 'link_before' => '<span>',
+            // 'link_after' => '</span>'
+          ]);
+        }
+      ?>
+
+    </div>
 
   </div>
 </nav>
 
-	<?php
-	// if ( has_nav_menu( 'primary' ) ) {
-	// 	wp_nav_menu( [
-	// 		'items_wrap'      => '<button class="toggle absolute pin-t pin-r mt-4 mr-4 button button-sm">Close</button><ul id="%1$s" class="%2$s">%3$s</ul>',
-	// 		'theme_location'  => 'primary',
-	// 		'container'       => 'nav',
-	// 		'container_class' => 'nav-mobile',
-	// 		'container_id'    => 'mobile-menu',
-	// 		'menu_class'      => 'list-reset m-12'
-	// 	] );
-	// }
-  ?>
 
-	<header class="header">
-		<div class="container mx-auto">
-			<?php
-			// $tag = 'p';
-			// if ( is_front_page() || is_home() ) {
-			// 	$tag = 'h1';
-			// }
-
-			// printf( '<%1$s class="h1 m-0"><a class="text-xl no-underline uppercase" href="%2$s" rel="home">%3$s</a></%1$s>',
-			// 	$tag,
-			// 	esc_url( home_url( '/' ) ),
-			// 	esc_html( get_bloginfo( 'name' ) )
-			// );
-
-			// if ( has_nav_menu( 'primary' ) ) {
-			// 	wp_nav_menu([
-			// 		'theme_location'  => 'primary',
-			// 		'container'       => 'nav',
-			// 		'container_class' => 'nav-primary ml-auto',
-			// 		'menu_class'      => 'list-reset m-0 md:flex md:justify-end md:items-center'
-			// 	]);
-			// }
-      ?>
-			<div class="menu-item">
-				<button class="toggle highlight">Menu</button>
-			</div>
-		</div>
-	</header>
-
-	<main>
+  <main>

@@ -1,16 +1,16 @@
 {
-	"name": "wp-73k-theme",
-	"version": "1.0.1",
-	"description": "WP 73k",
-	"main": "./assets/js/main.js",
-	"scripts": {
-		"start": "cross-env NODE_ENV=development SERVER=true webpack --watch",
-		"watch": "cross-env NODE_ENV=development webpack --watch",
-		"dev": "cross-env NODE_ENV=development webpack",
-		"prod": "cross-env NODE_ENV=production webpack",
-		"build": "concurrently \"npm run prod\" \"npm run dev\""
-	},
-	"dependencies": {
+  "name": "wp-73k-theme",
+  "version": "1.0.1",
+  "description": "WP 73k",
+  "main": "./assets/js/main.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development SERVER=true webpack --watch",
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "prod": "cross-env NODE_ENV=production webpack",
+    "build": "concurrently \"npm run prod\" \"npm run dev\""
+  },
+  "dependencies": {
     "@fontsource/jetbrains-mono": "^4.2.2",
     "@fontsource/open-sans": "^4.2.2",
     "@fontsource/righteous": "^4.x",
@@ -20,26 +20,26 @@
     "bootstrap": "^5.x",
     "bootstrap-icons": "^1.x",
     "hamburgers": "^1.x",
-		"postcss-custom-properties": "^9.1.1",
-		"postcss-import": "^12.0.1",
-		"postcss-nested": "^4.2.3",
-		"regenerator": "^0.14.7"
-	},
-	"devDependencies": {
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "regenerator": "^0.14.7"
+  },
+  "devDependencies": {
     "@babel/core": "^7.x",
     "@babel/preset-env": "^7.x",
-		"@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^10.x",
     "babel-loader": "^8.x",
-		"browser-sync": "^2.26.10",
-		"browser-sync-webpack-plugin": "^2.2.2",
-		"concurrently": "^5.2.0",
+    "browser-sync": "^2.26.10",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "concurrently": "^5.2.0",
     "copy-webpack-plugin": "^9.x",
-		"cross-env": "^7.0.2",
+    "cross-env": "^7.0.2",
     "css-loader": "^5.x",
     "css-minimizer-webpack-plugin": "^3.x",
     "file-loader": "^6.2.0",
-		"imagemin-webpack-plugin": "^2.4.2",
+    "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^1.x",
     "postcss": "^8.2.6",
     "postcss-loader": "^5.0.0",
@@ -49,17 +49,17 @@
     "svg-sprite-loader": "^6.x",
     "webpack": "^5.x",
     "webpack-cli": "^4.x"
-	},
-	"browserslist": [
+  },
+  "browserslist": [
     "defaults",
     "not dead",
     "last 3 versions",
     "not ie <= 11"
-	],
-	"engines": {
-		"node": ">=14.0.0",
-		"npm": ">=7.0.1"
-	},
-	"author": "Adam Piontek",
-	"license": "ISC"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.1"
+  },
+  "author": "Adam Piontek",
+  "license": "ISC"
 }

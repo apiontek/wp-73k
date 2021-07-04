@@ -16,59 +16,59 @@ let prefix = isProduction ? '.min' : '';
 
 // Set the PostCSS Plugins.
 const post_css_plugins = [
-	require('postcss-import'),
-	require('postcss-nested'),
-	require('postcss-custom-properties'),
-	require('autoprefixer')
+  require('postcss-import'),
+  require('postcss-nested'),
+  require('postcss-custom-properties'),
+  require('autoprefixer')
 ]
 
 // Add PurgeCSS for production builds.
 if ( isProduction ) {
-	post_css_plugins.push(
-		PurgeCSS({
-			content: [
-				'./*.php',
-				'./src/**/*.php',
-				'./page-templates/*.php',
-				'./assets/images/**/*.svg',
-				'./../../mu-plugins/app/src/components/**/*.php',
-			],
-			// Use Extractor configuration from Tailwind Docs
-			// https://tailwindcss.com/docs/controlling-file-size#setting-up-purge-css-manually
-			defaultExtractor: content => {
-    				// Capture as liberally as possible, including things like `h-(screen-1.5)`
-    				const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
+  post_css_plugins.push(
+    PurgeCSS({
+      content: [
+        './*.php',
+        './src/**/*.php',
+        './page-templates/*.php',
+        './assets/images/**/*.svg',
+        './../../mu-plugins/app/src/components/**/*.php',
+      ],
+      // Use Extractor configuration from Tailwind Docs
+      // https://tailwindcss.com/docs/controlling-file-size#setting-up-purge-css-manually
+      defaultExtractor: content => {
+            // Capture as liberally as possible, including things like `h-(screen-1.5)`
+            const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
 
-    				// Capture classes within other delimiters like .block(class="w-1/2") in Pug
-    				const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
+            // Capture classes within other delimiters like .block(class="w-1/2") in Pug
+            const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
 
-    				return broadMatches.concat(innerMatches)
-  			},
-			whitelistPatterns: getCSSWhitelistPatterns()
-		})
-	)
+            return broadMatches.concat(innerMatches)
+        },
+      whitelistPatterns: getCSSWhitelistPatterns()
+    })
+  )
 }
 
 const config = {
-	entry: './assets/js/main.js',
-	output: {
-		filename: `[name]${prefix}.js`,
-		path: path.resolve(__dirname, 'dist')
-	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
+  entry: './assets/js/main.js',
+  output: {
+    filename: `[name]${prefix}.js`,
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
-				loader: 'babel-loader',
-				options: {
-					presets: [
-						[
-							"@babel/preset-env"
-						]
-					]
-				}
-			},
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [
+              "@babel/preset-env"
+            ]
+          ]
+        }
+      },
       {
         test: /\.[s]?css$/,
         use: [
@@ -77,7 +77,7 @@ const config = {
           "sass-loader",
           "postcss-loader",
         ],
-			},
+      },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -116,50 +116,50 @@ const config = {
         },
       },
     ]
-	},
-	optimization: {
-		minimizer: ["...", new CssMinimizerPlugin()],
-	},
-	mode: process.env.NODE_ENV,
-	resolve: {
-		alias: {
-			'@'      : path.resolve('assets'),
-			'@images': path.resolve('../images')
-		}
-	},
-	plugins: [
-		new MiniCssExtractPlugin({ filename: `[name]${prefix}.css` }),
+  },
+  optimization: {
+    minimizer: ["...", new CssMinimizerPlugin()],
+  },
+  mode: process.env.NODE_ENV,
+  resolve: {
+    alias: {
+      '@'      : path.resolve('assets'),
+      '@images': path.resolve('../images')
+    }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: `[name]${prefix}.css` }),
     new SpriteLoaderPlugin({ plainSprite: true }),
-		new CopyWebpackPlugin({
-			patterns: [{
-                        	from: './assets/images/',
-                        	to: 'images',
-				globOptions: {
-					ignore: [
-						'**/.DS_Store'
-					]
-				}
-			}]
-		}),
-		new ImageminPlugin({ test: /\.(jpe?g|png|gif)$/i })
-	]
+    new CopyWebpackPlugin({
+      patterns: [{
+                          from: './assets/images/',
+                          to: 'images',
+        globOptions: {
+          ignore: [
+            '**/.DS_Store'
+          ]
+        }
+      }]
+    }),
+    new ImageminPlugin({ test: /\.(jpe?g|png|gif)$/i })
+  ]
 }
 
 // Fire up a local server if requested
 if (process.env.SERVER) {
-	config.plugins.push(
-		new BrowserSyncPlugin(
-			{
-				proxy: 'http://127.0.0.1:9764',
-				files: [
-					'**/*.php',
-					'**/*.scss'
-				],
-				port: 9765,
-				notify: false,
-			}
-		)
-	)
+  config.plugins.push(
+    new BrowserSyncPlugin(
+      {
+        proxy: 'http://127.0.0.1:9764',
+        files: [
+          '**/*.php',
+          '**/*.scss'
+        ],
+        port: 9765,
+        notify: false,
+      }
+    )
+  )
 }
 
 /**
@@ -167,38 +167,38 @@ if (process.env.SERVER) {
  * @returns {RegExp[]}
  */
 function getCSSWhitelistPatterns() {
-	return [
-		/^home(-.*)?$/,
-		/^blog(-.*)?$/,
-		/^archive(-.*)?$/,
-		/^date(-.*)?$/,
-		/^error404(-.*)?$/,
-		/^admin-bar(-.*)?$/,
-		/^search(-.*)?$/,
-		/^nav(-.*)?$/,
-		/^wp(-.*)?$/,
-		/^screen(-.*)?$/,
-		/^navigation(-.*)?$/,
-		/^(.*)-template(-.*)?$/,
-		/^(.*)?-?single(-.*)?$/,
-		/^postid-(.*)?$/,
-		/^post-(.*)?$/,
-		/^attachmentid-(.*)?$/,
-		/^attachment(-.*)?$/,
-		/^page(-.*)?$/,
-		/^(post-type-)?archive(-.*)?$/,
-		/^author(-.*)?$/,
-		/^category(-.*)?$/,
-		/^tag(-.*)?$/,
-		/^menu(-.*)?$/,
-		/^tags(-.*)?$/,
-		/^tax-(.*)?$/,
-		/^term-(.*)?$/,
-		/^date-(.*)?$/,
-		/^(.*)?-?paged(-.*)?$/,
-		/^depth(-.*)?$/,
-		/^children(-.*)?$/,
-	];
+  return [
+    /^home(-.*)?$/,
+    /^blog(-.*)?$/,
+    /^archive(-.*)?$/,
+    /^date(-.*)?$/,
+    /^error404(-.*)?$/,
+    /^admin-bar(-.*)?$/,
+    /^search(-.*)?$/,
+    /^nav(-.*)?$/,
+    /^wp(-.*)?$/,
+    /^screen(-.*)?$/,
+    /^navigation(-.*)?$/,
+    /^(.*)-template(-.*)?$/,
+    /^(.*)?-?single(-.*)?$/,
+    /^postid-(.*)?$/,
+    /^post-(.*)?$/,
+    /^attachmentid-(.*)?$/,
+    /^attachment(-.*)?$/,
+    /^page(-.*)?$/,
+    /^(post-type-)?archive(-.*)?$/,
+    /^author(-.*)?$/,
+    /^category(-.*)?$/,
+    /^tag(-.*)?$/,
+    /^menu(-.*)?$/,
+    /^tags(-.*)?$/,
+    /^tax-(.*)?$/,
+    /^term-(.*)?$/,
+    /^date-(.*)?$/,
+    /^(.*)?-?paged(-.*)?$/,
+    /^depth(-.*)?$/,
+    /^children(-.*)?$/,
+  ];
 }
 
 module.exports = config
