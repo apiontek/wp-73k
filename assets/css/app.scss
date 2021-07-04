@@ -1,1 +1,81 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+/* Fonts */
+@import "fonts";
+
+/* Load Bootstrap v5 and customizations */
+@import "bs-load";
+
+
+
+/* main */
+html,
+body {
+  color: $gray-100;
+  background-color: $gray-800;
+  height: 100%;
+}
+a {
+  color: rgba($white, 0.75);
+  border-bottom: $gray-600 2px solid;
+  text-decoration: none;
+  &.navbar-brand,
+  &.nav-link {
+    border-bottom: none;
+  }
+  &:visited {
+    color: $info;
+    .post-title & {
+      color: $gray-100;
+    }
+  }
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+    border-bottom: $secondary 3px solid;
+    &.navbar-brand {
+      border-bottom: none;
+    }
+  }
+}
+.border-gray-900 {
+  border-color: $gray-900 !important;
+}
+.text-gray-200 {
+  color: $gray-200;
+}
+.text-gray-300 {
+  color: $gray-300;
+}
+.text-gray-400 {
+  color: $gray-400;
+}
+.text-gray-500 {
+  color: $gray-500;
+}
+.border-10 {
+  border-width: 10px !important;
+}
+.border-20 {
+  border-width: 20px !important;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.font-brand {
+  font-family: $font-family-brand;
+}
+.fs-larger {
+  font-size: larger;
+}
+.fs-smaller {
+  font-size: smaller;
+}
+.footer73k {
+  position: fixed !important;
+  font-size: 10px !important;
+  border-top-left-radius: 0.3rem !important;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

@@ -24,17 +24,44 @@ namespace WP_73k;
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
+  <div class="container-fluid">
+
+    <?php
+			$tag = 'p';
+			if ( is_front_page() || is_home() ) {
+				$tag = 'h1';
+			}
+
+			printf( '<h1 class="my-0 py-0 lh-base"><a class="navbar-brand fs-1 text-secondary" href="%1$s" rel="home"><span class="fw-light font-brand">\\\\%2$s</span></a></h1>',
+				esc_url( home_url( '/' ) ),
+				esc_html( get_bloginfo( 'name' ) )
+			);
+
+			if ( has_nav_menu( 'primary' ) ) {
+				wp_nav_menu([
+					'theme_location'  => 'primary',
+					'container'       => 'nav',
+					'container_class' => 'nav-primary ml-auto',
+					'menu_class'      => 'list-reset m-0 md:flex md:justify-end md:items-center'
+				]);
+			} ?>
+
+  </div>
+</nav>
+
 	<?php
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_nav_menu( [
-			'items_wrap'      => '<button class="toggle absolute pin-t pin-r mt-4 mr-4 button button-sm">Close</button><ul id="%1$s" class="%2$s">%3$s</ul>',
-			'theme_location'  => 'primary',
-			'container'       => 'nav',
-			'container_class' => 'nav-mobile',
-			'container_id'    => 'mobile-menu',
-			'menu_class'      => 'list-reset m-12'
-		] );
-	}?>
+	// if ( has_nav_menu( 'primary' ) ) {
+	// 	wp_nav_menu( [
+	// 		'items_wrap'      => '<button class="toggle absolute pin-t pin-r mt-4 mr-4 button button-sm">Close</button><ul id="%1$s" class="%2$s">%3$s</ul>',
+	// 		'theme_location'  => 'primary',
+	// 		'container'       => 'nav',
+	// 		'container_class' => 'nav-mobile',
+	// 		'container_id'    => 'mobile-menu',
+	// 		'menu_class'      => 'list-reset m-12'
+	// 	] );
+	// }
+  ?>
 
 	<header class="header">
 		<div class="container mx-auto">

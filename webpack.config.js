@@ -1,10 +1,13 @@
 const path                 = require('path');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin    = require('copy-webpack-plugin');
+
 const ImageminPlugin       = require('imagemin-webpack-plugin').default;
 const BrowserSyncPlugin    = require('browser-sync-webpack-plugin');
 const PurgeCSS             = require('@fullhuman/postcss-purgecss');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 const isProduction         = 'production' === process.env.NODE_ENV;
 
 // Set the build prefix.
@@ -73,8 +76,21 @@ const config = {
           "sass-loader",
           "postcss-loader",
         ],
-			}
-		]
+			},
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              name: "[name].[ext]",
+              outputPath: "./fonts",
+            },
+          },
+        ],
+      },
+    ]
 	},
 	optimization: {
 		minimizer: ["...", new CssMinimizerPlugin()],
