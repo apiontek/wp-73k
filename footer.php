@@ -12,7 +12,6 @@
 namespace WP_73k;
 
 ?>
-    </main>
     <footer class="footer relative bg-dark-1 text-light-2 pt-8 pb-16">
       <div class="relative z-10">
         <div class="container mx-auto">

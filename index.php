@@ -9,6 +9,7 @@
 namespace WP_73k;
 
 get_header(); ?>
+<main class="container d-flex justify-content-center">
   <div class="container mx-auto relative z-10 mb-16 lg:mb-32 flex flex-wrap items-start">
     <div class="w-full lg:w-4/6 lg:pr-10 mb-8">
       <?php
@@ -20,12 +21,13 @@ get_header(); ?>
       } ?>
     </div>
     <?php
-    if ( is_active_sidebar( 'sidebar' ) ) : ?>
+    if ( !is_active_sidebar( 'sidebar' ) ) : ?>
       <aside class="w-full lg:w-2/6 bg-white border-gray-400 border-2 p-8">
         <?php dynamic_sidebar( 'sidebar' ); ?>
       </aside>
     <?php
     endif; ?>
   </div>
-  <?php
+</main>
+<?php
 get_footer();
