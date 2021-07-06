@@ -35,7 +35,7 @@ namespace WP_73k;
 
         echo svg_icon_use("mdi-desktop-classic", "icon baseline");
 
-        printf( ' <span class="fw-light font-brand">\\\\%1$s</span>',
+        printf( '<span class="fw-light font-brand">\\\\%1$s</span>',
           esc_html( get_bloginfo( 'name' ) )
         );
 
@@ -72,6 +72,3 @@ namespace WP_73k;
 
   </div>
 </nav>
-
-
-  <main>

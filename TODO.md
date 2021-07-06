@@ -7,11 +7,19 @@
 - [X] ~~*initial webpack config for development*~~ [2021-07-04]
 - [X] ~~*add font handling if possible*~~ [2021-07-04]
 - [X] ~~*add svg sprite handling if possible*~~ [2021-07-04]
-- [ ] svg theme function?
-- [ ] navbar menu
-- [ ] navbar hamburger mobile toggler
-- [ ] properly incorporate favicons (meta links etc)
+- [X] ~~*svg theme function?*~~ [2021-07-06]
+- [X] ~~*navbar menu*~~ [2021-07-06]
+- [X] ~~*navbar hamburger mobile toggler*~~ [2021-07-06]
 - [ ] pore through template files to update theming
+  - [X] ~~*initial front-page.php*~~ [2021-07-06]
+  - [X] ~~*create social-icons working for front page*~~ [2021-07-06]
+  - [ ] create About page and suitable index.php modifications for it
+  - [ ] create some blog entries
+  - [ ] create Blog page and is index.php also ok for it?
+  - [ ] create Resume page and decide on using general or specific template
+  - [ ] create Portfolio placeholder page
+- [ ] properly incorporate favicons (meta links etc)
+  - [ ] include pubkey asc file, others??
 - [ ] purgecss/webpack config for production
 - [ ] double-check npm run build output to ensure it's all working
 - [ ] ...

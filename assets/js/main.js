@@ -20,7 +20,7 @@ import "../../node_modules/@mdi/svg/svg/open-in-new.svg";
 import "../../node_modules/@mdi/svg/svg/linkedin.svg";
 import "../../node_modules/@mdi/svg/svg/github.svg";
 import "../../node_modules/@mdi/svg/svg/key-variant.svg";
-// import "../raw/gitea.svg";
+import "../raw/gitea.svg";
 import "../../node_modules/@mdi/svg/svg/goodreads.svg";
 import "../../node_modules/@mdi/svg/svg/twitter.svg";
 import "../../node_modules/@mdi/svg/svg/facebook.svg";

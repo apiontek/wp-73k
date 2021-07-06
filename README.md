@@ -19,6 +19,17 @@ The WordPress theme for 73k.us, based on Bootstrap 5 and PurgeCSS.
 ## Webpack
 The theme uses Webpack as its bundler with ES6 modules for JavaScript files. It also compresses images found in src automatically, and maps images to the appropriate destination through the `@images` alias. For example, `@images/example.jpg` would be compiled to `../images/example.jpg`.
 
+## Hamburgers
+
+The sass for the hamburgers package throws warnings unless fixed:
+
+```bash
+npm i -g sass-migrator
+cd node_modules/hamburgers
+find  _sass/hamburgers/ -type f | while read f; do npx sass-migrator division -d ${f}; done
+cd ../..
+```
+
 ## Deployment 
 ```bash
 npm run build
