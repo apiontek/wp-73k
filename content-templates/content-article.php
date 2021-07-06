@@ -9,6 +9,23 @@
 namespace WP_73k;
 
 ?>
+<article class="post border-bottom border-gray pb-4 mb-3" itemscope itemtype="https://schema.org/CreativeWork">
+  <header>
+    <h2 class="post-title fs-2 fw-600 mb-2">
+    <?php
+      if ( is_archive() || is_home() ) {
+        printf( '<a href="%s" rel="bookmark">%s</a>',
+          esc_url( get_the_permalink() ),
+          esc_html( get_the_title() )
+        );
+      } else {
+        echo get_the_title();
+      } ?>
+    </h2>
+  </header>
+</article>
+
+
 <article <?php post_class( 'bg-white border-2 border-gray-400 p-8' ); ?> itemscope itemtype="https://schema.org/CreativeWork">
   <header>
     <h2 class="m-0">
