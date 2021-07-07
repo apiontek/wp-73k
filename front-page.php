@@ -24,7 +24,7 @@ get_header('', array('fixednav'=>true)); ?>
     <div class="col-auto justify-content-start ms-lg-3">
 
       <h2 class="fs-2 fw-600 mb-0">
-        <?php echo svg_icon_use("mdi-account", "icon baseline") . '<span>Adam Piontek</span>'; ?>
+        <?php echo svg_icon_use("mdi-account", "icon baseline") . ' <span>Adam Piontek</span>'; ?>
       </h2>
 
       <div class="font-monospace text-gray-300 fs-5">Desktop Systems Engineer. Human.</div>

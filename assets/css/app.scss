@@ -122,7 +122,6 @@ blockquote {
     p {
       @extend .blockquote;
       margin-bottom: -0.25rem !important;
-      // font-size: 1.25rem !important;
     }
     cite {
       @extend .blockquote-footer;

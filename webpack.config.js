@@ -176,7 +176,7 @@ function getCSSWhitelistPatterns() {
     /^(.*)?-?paged(-.*)?$/,
     /^depth(-.*)?$/,
     /^children(-.*)?$/,
-    /^mt--05r$/,
+    /^mt--(.*)?$/,
   ];
 }
 
