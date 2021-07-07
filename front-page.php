@@ -8,8 +8,8 @@
 
 namespace WP_73k;
 
-get_header(); ?>
-<main class="container-fluid d-flex justify-content-center align-items-center" style="height: 80%;">
+get_header('', array('fixednav'=>true)); ?>
+<main class="container-fluid h-100 d-flex justify-content-center align-items-center">
   <div class="d-flex flex-column-reverse flex-lg-row align-items-lg-end mt-5">
 
 

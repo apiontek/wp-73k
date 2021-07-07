@@ -26,10 +26,10 @@ namespace WP_73k;
       </div>
     </footer> -->
     <footer class="footer73k footer bottom-0 end-0 bg-dark">
-        <div class="px-2 px-sm-3">
-          <span class="text-gray-300">&copy; Copyright <?php echo date("Y") ?> Adam Piontek</span>
-        </div>
-      </footer>
+      <div class="px-2 px-sm-3">
+        <span class="text-gray-300">&copy; Copyright <?php echo date("Y") ?> Adam Piontek</span>
+      </div>
+    </footer>
 
     <?php wp_footer(); ?>
   </body>

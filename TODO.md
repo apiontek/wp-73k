@@ -13,7 +13,7 @@
 - [ ] pore through template files to update theming
   - [X] ~~*initial front-page.php*~~ [2021-07-06]
   - [X] ~~*create social-icons working for front page*~~ [2021-07-06]
-  - [ ] create About page and suitable index.php modifications for it
+  - [X] ~~*create About page and suitable page.php for it & other generic pages*~~ [2021-07-06]
   - [ ] create some blog entries
   - [ ] create Blog page and is index.php also ok for it?
   - [ ] create Resume page and decide on using general or specific template
