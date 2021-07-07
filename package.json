@@ -19,9 +19,6 @@
     "@popperjs/core": "^2.x",
     "bootstrap": "^5.x",
     "hamburgers": "^1.x",
-    "postcss-custom-properties": "^9.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.3",
     "regenerator": "^0.14.7"
   },
   "devDependencies": {

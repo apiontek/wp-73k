@@ -14,23 +14,6 @@ const isProduction          = 'production' === process.env.NODE_ENV;
 // Set the build prefix.
 let prefix = isProduction ? '.min' : '';
 
-// // Add PurgeCSS for production builds.
-// if ( isProduction ) {
-//   post_css_plugins.push(
-//     PurgeCSS({
-//       content: [
-//         './*.php',
-//         './src/**/*.php',
-//         './page-templates/*.php',
-//         './content-templates/*.php',
-//         './assets/images/**/*.svg',
-//         './../../mu-plugins/app/src/components/**/*.php',
-//       ],
-//       whitelistPatterns: getCSSWhitelistPatterns()
-//     })
-//   )
-// }
-
 const config = {
   entry: './assets/js/main.js',
   output: {
@@ -133,8 +116,6 @@ const config = {
             './src/**/*.php',
             './page-templates/*.php',
             './content-templates/*.php',
-            // './assets/images/**/*.svg',
-            // './../../mu-plugins/app/src/components/**/*.php',
           ]),
           safelist: {
             greedy: getCSSWhitelistPatterns(),
