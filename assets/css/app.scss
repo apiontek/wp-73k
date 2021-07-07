@@ -172,3 +172,6 @@ blockquote {
 .post li {
   line-height: 1.75rem;
 }
+.more-link {
+  @extend .fs-6;
+}

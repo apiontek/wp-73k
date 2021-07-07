@@ -1,0 +1,47 @@
+# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+# User-agent: *
+# Disallow: /
+
+User-agent: *
+Crawl-delay: 5
+Disallow: /pcasts/
+Disallow: /flux/
+Disallow: /znc/
+Disallow: /lounge/
+Disallow: /books/
+Disallow: /fs-adam/
+Disallow: /wol/
+Disallow: /asrv/
+Disallow: /komga/
+
+User-agent: PetalBot
+Disallow: /git/
+
+User-agent: MJ12bot
+Disallow: /git/
+
+User-agent: SemrushBot
+Disallow: /git/
+
+User-agent: ZoominfoBot
+Disallow: /git/
+
+User-agent: DotBot
+Disallow: /git/
+
+User-agent: MauiBot
+Disallow: /git/
+
+User-agent: AhrefsBot
+Disallow: /git/
+
+User-agent: Discordbot
+Disallow: /git/
+
+User-agent: BLEXBot
+Disallow: /git/
+
+User-agent: YandexBot
+Disallow: /git/

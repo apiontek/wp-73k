@@ -15,9 +15,33 @@ namespace WP_73k;
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri() . '/assets/images/favicon.png'; ?>">
+
+  <meta name="description" content="Personal website, blog, resume, portfolio for Adam Piontek">
+  <meta name="author" content="Adam Piontek"/>
+  <link rel="me" href="mailto:adam@73k.us"/>
+  <link rel="me" href="sms:+16462341697"/>
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth"/>
+
+  <link rel="preload" href="<?php echo get_stylesheet_directory_uri() . '/dist/fonts/righteous-latin-400-normal.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="<?php echo get_stylesheet_directory_uri() . '/dist/fonts/source-serif-pro-latin-400-normal.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="<?php echo get_stylesheet_directory_uri() . '/dist/fonts/jetbrains-mono-latin-300-normal.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="<?php echo get_stylesheet_directory_uri() . '/dist/fonts/source-serif-pro-latin-600-normal.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/apple-touch-icon.png'; ?>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/favicon-32x32.png'; ?>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/favicon-16x16.png'; ?>">
+  <link rel="manifest" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/site.webmanifest'; ?>">
+  <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/safari-pinned-tab.svg'; ?>" color="#78868a">
+  <meta name="apple-mobile-web-app-title" content="73k">
+  <meta name="application-name" content="73k">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/favicon.ico">
+
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <?php wp_head(); ?>
 </head>

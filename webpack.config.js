@@ -1,53 +1,35 @@
-const path                 = require('path');
+const path                  = require('path');
+const glob                  = require("glob-all");
+const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
+const CssMinimizerPlugin    = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin     = require('copy-webpack-plugin');
+const SpriteLoaderPlugin    = require("svg-sprite-loader/plugin");
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const CopyWebpackPlugin    = require('copy-webpack-plugin');
-const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
+const ImageminPlugin        = require('imagemin-webpack-plugin').default;
+const BrowserSyncPlugin     = require('browser-sync-webpack-plugin');
+const PurgecssPlugin        = require("purgecss-webpack-plugin");
 
-const ImageminPlugin       = require('imagemin-webpack-plugin').default;
-const BrowserSyncPlugin    = require('browser-sync-webpack-plugin');
-const PurgeCSS             = require('@fullhuman/postcss-purgecss');
-
-const isProduction         = 'production' === process.env.NODE_ENV;
+const isProduction          = 'production' === process.env.NODE_ENV;
 
 // Set the build prefix.
 let prefix = isProduction ? '.min' : '';
 
-// Set the PostCSS Plugins.
-const post_css_plugins = [
-  require('postcss-import'),
-  require('postcss-nested'),
-  require('postcss-custom-properties'),
-  require('autoprefixer')
-]
-
-// Add PurgeCSS for production builds.
-if ( isProduction ) {
-  post_css_plugins.push(
-    PurgeCSS({
-      content: [
-        './*.php',
-        './src/**/*.php',
-        './page-templates/*.php',
-        './assets/images/**/*.svg',
-        './../../mu-plugins/app/src/components/**/*.php',
-      ],
-      // Use Extractor configuration from Tailwind Docs
-      // https://tailwindcss.com/docs/controlling-file-size#setting-up-purge-css-manually
-      defaultExtractor: content => {
-            // Capture as liberally as possible, including things like `h-(screen-1.5)`
-            const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
-
-            // Capture classes within other delimiters like .block(class="w-1/2") in Pug
-            const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
-
-            return broadMatches.concat(innerMatches)
-        },
-      whitelistPatterns: getCSSWhitelistPatterns()
-    })
-  )
-}
+// // Add PurgeCSS for production builds.
+// if ( isProduction ) {
+//   post_css_plugins.push(
+//     PurgeCSS({
+//       content: [
+//         './*.php',
+//         './src/**/*.php',
+//         './page-templates/*.php',
+//         './content-templates/*.php',
+//         './assets/images/**/*.svg',
+//         './../../mu-plugins/app/src/components/**/*.php',
+//       ],
+//       whitelistPatterns: getCSSWhitelistPatterns()
+//     })
+//   )
+// }
 
 const config = {
   entry: './assets/js/main.js',
@@ -142,7 +124,25 @@ const config = {
       }]
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif)$/i })
-  ]
+  ].concat(
+    isProduction
+      ? [
+        new PurgecssPlugin({
+          paths: glob.sync([
+            './*.php',
+            './src/**/*.php',
+            './page-templates/*.php',
+            './content-templates/*.php',
+            // './assets/images/**/*.svg',
+            // './../../mu-plugins/app/src/components/**/*.php',
+          ]),
+          safelist: {
+            greedy: getCSSWhitelistPatterns(),
+          },
+        }),
+      ]
+      : []
+  )
 }
 
 // Fire up a local server if requested

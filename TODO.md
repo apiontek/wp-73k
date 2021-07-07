@@ -14,13 +14,26 @@
   - [X] ~~*initial front-page.php*~~ [2021-07-06]
   - [X] ~~*create social-icons working for front page*~~ [2021-07-06]
   - [X] ~~*create About page and suitable page.php for it & other generic pages*~~ [2021-07-06]
-  - [ ] create some blog entries
-  - [ ] create Blog page and is index.php also ok for it?
+  - [X] ~~*create some blog entries*~~ [2021-07-06]
+- [X] ~~*properly incorporate favicons (meta links etc)*~~ [2021-07-07]
+  - [X] ~~*include pubkey asc file, others??*~~ [2021-07-07]
+- [ ] purgecss/webpack config for production
+  - [ ] clear dist folder and test building again
+- [ ] continue main work
+  - [ ] confirm content-article.php ok for multi-post blog page index listing
+  - [ ] single-post blog post view?
+  - [ ] syntax highlighting?
   - [ ] create Resume page and decide on using general or specific template
   - [ ] create Portfolio placeholder page
-- [ ] properly incorporate favicons (meta links etc)
-  - [ ] include pubkey asc file, others??
-- [ ] purgecss/webpack config for production
+  - [ ] sidebar or footer for blog pages? meta info etc?
+  - [ ] footer for non-front-page that isn't stuck to bottom right?
 - [ ] double-check npm run build output to ensure it's all working
 - [ ] ...
 - [ ] profit!
+- [ ] TRANSFER TO PRODUCTION
+  - [ ] content/settings (db export?)
+  - [ ] contents of assets/cp-to-root folder: copy to root of wordpress install
+- [ ] use wordpress for filebrowser login auth?
+- [ ] Plugins for security and optimization
+  - [ ] jetpack? markdown from that one?
+  - [ ] indieweb stuff?
