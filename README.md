@@ -25,9 +25,17 @@ The sass for the hamburgers package throws warnings unless fixed:
 
 ```bash
 npm i -g sass-migrator
-cd node_modules/hamburgers
-find  _sass/hamburgers/ -type f | while read f; do npx sass-migrator division -d ${f}; done
-cd ../..
+HBPATH="./node_modules/hamburgers/_sass/hamburgers/"
+find ${HBPATH} -type f | while read f; do npx sass-migrator division -d ${f}; done
+```
+
+Clean node_modules testing:
+
+```bash
+rm -rf node_modules && rm -rf dist && npm i && HBPATH="./node_modules/hamburgers/_sass/hamburgers/"
+find ${HBPATH} -type f | while read f; do npx sass-migrator division -d ${f}; done
+NODE_ENV=development node --trace-deprecation node_modules/webpack/bin/webpack.js
+NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js
 ```
 
 ## Deployment 

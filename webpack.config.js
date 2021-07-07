@@ -4,8 +4,6 @@ const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const CssMinimizerPlugin    = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin     = require('copy-webpack-plugin');
 const SpriteLoaderPlugin    = require("svg-sprite-loader/plugin");
-
-const ImageminPlugin        = require('imagemin-webpack-plugin').default;
 const BrowserSyncPlugin     = require('browser-sync-webpack-plugin');
 const PurgecssPlugin        = require("purgecss-webpack-plugin");
 
@@ -61,7 +59,7 @@ const config = {
         loader: "svg-sprite-loader",
         options: {
           extract: true,
-          spriteFilename: "icons.svg",
+          spriteFilename: "icon-sprites.svg",
           publicPath: "./images/",
           symbolId: (filePath) => {
             if (filePath.includes("bootstrap-icons")) {
@@ -106,7 +104,6 @@ const config = {
         }
       }]
     }),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif)$/i })
   ].concat(
     isProduction
       ? [
@@ -179,6 +176,7 @@ function getCSSWhitelistPatterns() {
     /^(.*)?-?paged(-.*)?$/,
     /^depth(-.*)?$/,
     /^children(-.*)?$/,
+    /^mt--05r$/,
   ];
 }
 

@@ -23,21 +23,21 @@ namespace WP_73k;
       } ?>
     </h2>
 
-    <?php $posttags = get_the_tags(); ?>
-    <div class="post-date font-monospace text-gray-300 <?php if (count($posttags) == 0) { echo 'mb-3'; } ?>">
+    <div class="post-date font-monospace text-gray-300 <?php echo (has_tag() ? '' : 'mb-3'); ?>">
       <?php echo svg_icon_use("mdi-calendar-clock", "icon baseline me-2") . get_the_date('F j, Y'); ?>
       by <?php echo svg_icon_use("mdi-account", "icon baseline me-1") . get_the_author(); ?>
     </div>
 
     <?php
-      if (count($posttags) > 0) {
+      if (has_tag()) {
         echo '<div class="post-tags fs-smaller mb-4">' . svg_icon_use("mdi-tag-multiple", "icon baseline text-gray-300 me-1");
 
         $tag_strings = array_map(function ($tag) {
           $tag_str = '<span class="text-gray-300">#</span>';
           $tag_str .= '<a href="' . get_bloginfo('url') . '/tag/' . $tag->slug . '">' . $tag->name . '</a>';
           return $tag_str;
-        }, $posttags);
+        }, get_the_tags());
+
         echo implode(", ", $tag_strings) . '</div>';
       }
     ?>
