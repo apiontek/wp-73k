@@ -56,6 +56,10 @@ a {
     }
   }
 }
+.wp-block-separator {
+  border-top: none !important;
+  border-bottom: none !important;
+}
 
 /* navbar menus */
 // nav.navbar ul.navbar-nav li.menu-item

@@ -128,13 +128,17 @@ if (process.env.SERVER) {
   config.plugins.push(
     new BrowserSyncPlugin(
       {
-        proxy: 'http://127.0.0.1:9764',
+        proxy: 'https://dev1.73k.us',
         files: [
           '**/*.php',
           '**/*.scss'
         ],
         port: 9765,
+        host: '172.22.1.2',
+        listen: '172.22.1.2',
         notify: false,
+        open: false,
+        ui: { port: 9760 }
       }
     )
   )
