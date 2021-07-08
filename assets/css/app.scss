@@ -14,10 +14,16 @@
 @import "nav-bar-help";
 
 
-.font-monospace {
+/* code & syntax highlighting */
+pre, code, .font-monospace {
   font-family: $font-family-monospace;
   font-weight: 300;
   font-size: 15px;
+}
+code.hljs {
+  padding: 0.75rem 1rem;
+  border-radius: .5em;
+  background-color: #1c1c1c;
 }
 
 /* main */
@@ -111,6 +117,7 @@ a {
   }
 }
 
+/* blockquote handling */
 blockquote {
   &.wp-block-quote {
     @extend .border-start;
@@ -121,7 +128,9 @@ blockquote {
     @extend .ps-3;
     p {
       @extend .blockquote;
-      margin-bottom: -0.25rem !important;
+      &:last-of-type {
+        margin-bottom: -0.25rem !important;
+      }
     }
     cite {
       @extend .blockquote-footer;

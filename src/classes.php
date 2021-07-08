@@ -65,3 +65,13 @@ add_filter( 'wp_nav_menu_objects', function($items, $args) {
   }
   return $items;
 }, 1, 2 );
+
+/*
+ * Filter for syntax-highlighting-code-block plugin style theme
+ */
+add_filter(
+	'syntax_highlighting_code_block_style',
+	function() {
+		return 'tomorrow-night-eighties';
+	}
+);

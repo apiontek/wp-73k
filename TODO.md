@@ -17,12 +17,16 @@
   - [X] ~~*create some blog entries*~~ [2021-07-06]
 - [X] ~~*properly incorporate favicons (meta links etc)*~~ [2021-07-07]
   - [X] ~~*include pubkey asc file, others??*~~ [2021-07-07]
-- [ ] purgecss/webpack config for production
-  - [ ] clear dist folder and test building again
-- [ ] continue main work
-  - [ ] confirm content-article.php ok for multi-post blog page index listing
-  - [ ] single-post blog post view?
-  - [ ] syntax highlighting?
+- [X] ~~*purgecss/webpack config for production*~~ [2021-07-07]
+  - [X] ~~*clear dist folder and test building again*~~ [2021-07-07]
+- [X] ~~*continue blog work*~~ [2021-07-08]
+  - [X] ~~*confirm content-article.php ok for multi-post blog page index listing*~~ [2021-07-08]
+  - [X] ~~*single-post blog post view?*~~ [2021-07-08]
+- [ ] MOVE TO MCCOY/DEV1 WORDPRESS (1.5.8 RC1 ?)
+- [ ] syntax highlighting?
+  - [ ] create some posts with code inside (inline and blocks)
+  - [ ] create plugin to use chroma to highlight?
+- [ ] remaining pages
   - [ ] create Resume page and decide on using general or specific template
   - [ ] create Portfolio placeholder page
   - [ ] sidebar or footer for blog pages? meta info etc?
