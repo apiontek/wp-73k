@@ -38,6 +38,19 @@ NODE_ENV=development node --trace-deprecation node_modules/webpack/bin/webpack.j
 NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js
 ```
 
+## Static Files via nginx
+
+Static files under `assets/_root` should be served by nginx with location config like so:
+
+```conf
+location ~ /(robots.txt|favicon.ico|F185CEE29A3D443_public_key.asc|android-chrome-192x192.png|android-chrome-512x512.png|browserconfig.xml|keybase.txt|mstile-150x150.png|qpalpha.jpg|thatsjotuncock.gif|vpalpha.jpg) {
+    root /var/www/dev1/wordpress-5.8-RC2/wp-content/themes/wp-73k/assets/_root/;
+    allow all;
+    log_not_found off;
+    access_log off;
+}
+```
+
 ## Deployment 
 ```bash
 npm run build

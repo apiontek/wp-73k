@@ -72,6 +72,7 @@ add_filter( 'wp_nav_menu_objects', function($items, $args) {
 add_filter(
 	'syntax_highlighting_code_block_style',
 	function() {
-		return 'tomorrow-night-eighties';
+		// return 'tomorrow-night-eighties';
+		return 'tomorrow-night';
 	}
 );

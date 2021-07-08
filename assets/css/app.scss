@@ -13,17 +13,31 @@
 /* Navbar custom styling */
 @import "nav-bar-help";
 
-
-/* code & syntax highlighting */
+/*
+ * Code syntax highlighting
+ * Actual highlighting is done by plugin
+ * "Syntax-highlighting Code Block (with Server-side Rendering)"
+ * url: https://wordpress.org/plugins/syntax-highlighting-code-block/
+ *
+ * highlighting style is set in classes.php by adding filter to
+ * 'syntax_highlighting_code_block_style'
+ */
 pre, code, .font-monospace {
   font-family: $font-family-monospace;
   font-weight: 300;
   font-size: 15px;
 }
 code.hljs {
-  padding: 0.75rem 1rem;
+  padding: 0.4rem 0.75rem;
   border-radius: .5em;
-  background-color: #1c1c1c;
+//   background-color: #1c1c1c;
+}
+p code {
+  background-color: #2d2d2d;;
+  color: #e2e4e5;
+  padding: .1em .4em;
+  border-radius: .25em;
+  display: inline;
 }
 
 /* main */
@@ -108,7 +122,11 @@ a {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-.mt--05r {
+.tek-subtitle {
+  @extend .fs-5;
+  @extend .font-monospace;
+  @extend .text-gray-300;
+  @extend .mb-3;
   margin-top: -0.5rem;
 }
 
@@ -130,18 +148,31 @@ blockquote {
     @extend .ms-0;
     @extend .my-4;
     @extend .ps-3;
+    @extend .py-2;
+    background-color: $gray-750;
+    &.tek-bq-lg {
+      p {
+        font-size: 1.375rem;
+      }
+    }
     p {
       @extend .blockquote;
+      font-size: 1em;
       &:last-of-type {
-        margin-bottom: -0.25rem !important;
+        @extend .my-0;
+        @extend .py-0;
       }
     }
     cite {
       @extend .blockquote-footer;
       @extend .text-gray-300;
-      @extend .mb-0;
+      @extend .my-0;
+      @extend .py-0;
       font-size: 0.85em;
       font-style: normal;
+    }
+    :last-child {
+      @extend .py-1;
     }
   }
 }
