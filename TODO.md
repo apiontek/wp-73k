@@ -24,8 +24,8 @@
   - [X] ~~*single-post blog post view?*~~ [2021-07-08]
 - [X] ~~*MOVE TO MCCOY/DEV1 WORDPRESS (1.5.8 RC1 ?)*~~ [2021-07-08]
 - [ ] create Resume page
-  - [ ] reconfigured social icons to allow filtering to professional icons
-  - [ ] also allowing 'social_icons' shortcode for inserting social icons from wp editor
+  - [X] ~~*reconfigured social icons to allow filtering to professional icons*~~ [2021-07-09]
+  - [X] ~~*also allowing 'social_icons' shortcode for inserting social icons from wp editor*~~ [2021-07-09]
   - [ ] implement resume separator content
   - [ ] implement resume content ... and update?
 - [ ] re-do Front Page as content from within WP?
@@ -39,10 +39,13 @@
 - [ ] TRANSFER TO PRODUCTION
   - [ ] content/settings (db export?)
   - [ ] nginx config w/special root files
-- [ ] use wordpress for filebrowser login auth?
 - [ ] Plugins for security and optimization
   - [ ] jetpack? markdown from that one?
+  - [ ] caching? lighthouse report (cat-roof webp, woff2 fonts)
+    - [ ] [info](https://wordpress.org/support/article/optimization/#browser-caching)
+  - [ ] comments? discussion?
   - [ ] indieweb stuff?
+- [ ] use wordpress for filebrowser login auth?
 - [ ] Portfolio: just a blog category view of project blog posts?
 - [ ] add recipe posts
 - [ ] add some code/notes posts of things I've learned?
