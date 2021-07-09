@@ -10,7 +10,7 @@
 - [X] ~~*svg theme function?*~~ [2021-07-06]
 - [X] ~~*navbar menu*~~ [2021-07-06]
 - [X] ~~*navbar hamburger mobile toggler*~~ [2021-07-06]
-- [ ] pore through template files to update theming
+- [X] ~~*pore through template files to update theming*~~ [2021-07-08]
   - [X] ~~*initial front-page.php*~~ [2021-07-06]
   - [X] ~~*create social-icons working for front page*~~ [2021-07-06]
   - [X] ~~*create About page and suitable page.php for it & other generic pages*~~ [2021-07-06]
@@ -22,22 +22,28 @@
 - [X] ~~*continue blog work*~~ [2021-07-08]
   - [X] ~~*confirm content-article.php ok for multi-post blog page index listing*~~ [2021-07-08]
   - [X] ~~*single-post blog post view?*~~ [2021-07-08]
-- [ ] MOVE TO MCCOY/DEV1 WORDPRESS (1.5.8 RC1 ?)
-- [ ] syntax highlighting?
-  - [ ] create some posts with code inside (inline and blocks)
-  - [ ] create plugin to use chroma to highlight?
-- [ ] remaining pages
-  - [ ] create Resume page and decide on using general or specific template
-  - [ ] create Portfolio placeholder page
-  - [ ] sidebar or footer for blog pages? meta info etc?
-  - [ ] footer for non-front-page that isn't stuck to bottom right?
+- [X] ~~*MOVE TO MCCOY/DEV1 WORDPRESS (1.5.8 RC1 ?)*~~ [2021-07-08]
+- [ ] create Resume page
+  - [ ] reconfigured social icons to allow filtering to professional icons
+  - [ ] also allowing 'social_icons' shortcode for inserting social icons from wp editor
+  - [ ] implement resume separator content
+  - [ ] implement resume content ... and update?
+- [ ] re-do Front Page as content from within WP?
+  - [ ] using 'featured image' or some such?
+  - [ ] using shortcode for social icons?
+- [ ] figure out Search
+- [ ] Recipes & trip logs w/images? Videos?
 - [ ] double-check npm run build output to ensure it's all working
 - [ ] ...
 - [ ] profit!
 - [ ] TRANSFER TO PRODUCTION
   - [ ] content/settings (db export?)
-  - [ ] contents of assets/cp-to-root folder: copy to root of wordpress install
+  - [ ] nginx config w/special root files
 - [ ] use wordpress for filebrowser login auth?
 - [ ] Plugins for security and optimization
   - [ ] jetpack? markdown from that one?
   - [ ] indieweb stuff?
+- [ ] Portfolio: just a blog category view of project blog posts?
+- [ ] add recipe posts
+- [ ] add some code/notes posts of things I've learned?
+- [ ] other ideas?

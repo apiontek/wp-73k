@@ -24,8 +24,10 @@ namespace WP_73k;
     </h2>
 
     <div class="post-date font-monospace text-gray-300 <?php echo (has_tag() ? '' : 'mb-3'); ?>">
-      <?php echo svg_icon_use("mdi-calendar-clock", "icon baseline me-2") . get_the_date('F j, Y'); ?>
-      by <?php echo svg_icon_use("mdi-account", "icon baseline me-1") . get_the_author(); ?>
+      <?php 
+        echo svg_icon_use("mdi-calendar-clock", "icon baseline me-2") . get_the_date('F j, Y');
+        echo ' by ' . svg_icon_use("mdi-account", "icon baseline me-1") . get_the_author();
+      ?>
     </div>
 
     <?php

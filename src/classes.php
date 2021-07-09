@@ -22,7 +22,7 @@ add_filter( 'body_class', function( $classes ) {
 
 });
 
-/*
+/**
  * Filter to add CSS class to navbar menu <li> items
  */
 add_filter( 'nav_menu_css_class' , function( $classes, $item, $args, $depth ) {
@@ -34,7 +34,7 @@ add_filter( 'nav_menu_css_class' , function( $classes, $item, $args, $depth ) {
   return $classes;
 }, 3, 4 );
 
-/*
+/**
  * Filter to add CSS class to navbar menu item <a> links
  */
 add_filter( 'nav_menu_link_attributes' , function( $atts, $item, $args ) {
@@ -50,7 +50,7 @@ add_filter( 'nav_menu_link_attributes' , function( $atts, $item, $args ) {
   return $atts;
 }, 2, 3 );
 
-/*
+/**
  * Filter to add icons to navbar menu items
  */
 add_filter( 'wp_nav_menu_objects', function($items, $args) {
@@ -66,7 +66,7 @@ add_filter( 'wp_nav_menu_objects', function($items, $args) {
   return $items;
 }, 1, 2 );
 
-/*
+/**
  * Filter for syntax-highlighting-code-block plugin style theme
  */
 add_filter(
@@ -76,3 +76,15 @@ add_filter(
 		return 'tomorrow-night';
 	}
 );
+
+
+/**
+ * Set document title (in html head) to be reversed with '\' separator
+ */
+add_filter( 'document_title_separator', function ( $separator ) {
+  return '\\';
+} );
+
+add_filter('document_title_parts', function ($title) {
+  return (is_home() || is_front_page()) ? $title : array_reverse($title);
+});

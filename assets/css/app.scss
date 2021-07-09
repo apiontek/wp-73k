@@ -32,10 +32,10 @@ code.hljs {
   border-radius: .5em;
 //   background-color: #1c1c1c;
 }
-p code {
-  background-color: #2d2d2d;;
-  color: #e2e4e5;
-  padding: .1em .4em;
+p code, li code {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  padding: .2em .4em .1em;
   border-radius: .25em;
   display: inline;
 }
@@ -126,8 +126,24 @@ a {
   @extend .fs-5;
   @extend .font-monospace;
   @extend .text-gray-300;
-  @extend .mb-3;
+  @extend .mb-0;
   margin-top: -0.5rem;
+}
+
+/* front page styles */
+#front-page img.wp-post-image {
+  @extend .img-fluid;
+  @extend .border;
+  // @extend .border-20;
+  @extend .border-gray-900;
+  @extend .rounded-2;
+  border-width: 18px !important;
+  width: 100%;
+}
+#front-page h2 {
+  @extend .fs-2;
+  @extend .fw-600;
+  @extend .mb-0;
 }
 
 /* social icons */
