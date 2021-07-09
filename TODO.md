@@ -23,14 +23,14 @@
   - [X] ~~*confirm content-article.php ok for multi-post blog page index listing*~~ [2021-07-08]
   - [X] ~~*single-post blog post view?*~~ [2021-07-08]
 - [X] ~~*MOVE TO MCCOY/DEV1 WORDPRESS (1.5.8 RC1 ?)*~~ [2021-07-08]
-- [ ] create Resume page
+- [X] ~~*create Resume page*~~ [2021-07-09]
   - [X] ~~*reconfigured social icons to allow filtering to professional icons*~~ [2021-07-09]
   - [X] ~~*also allowing 'social_icons' shortcode for inserting social icons from wp editor*~~ [2021-07-09]
-  - [ ] implement resume separator content
-  - [ ] implement resume content ... and update?
-- [ ] re-do Front Page as content from within WP?
-  - [ ] using 'featured image' or some such?
-  - [ ] using shortcode for social icons?
+  - [X] ~~*implement resume separator content*~~ [2021-07-09]
+  - [X] ~~*implement resume content ... and update?*~~ [2021-07-09]
+- [X] ~~*re-do Front Page as content from within WP?*~~ [2021-07-09]
+  - [X] ~~*using 'featured image' or some such?*~~ [2021-07-09]
+  - [X] ~~*using shortcode for social icons?*~~ [2021-07-09]
 - [ ] figure out Search
 - [ ] Recipes & trip logs w/images? Videos?
 - [ ] double-check npm run build output to ensure it's all working
