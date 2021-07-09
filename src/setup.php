@@ -5,7 +5,7 @@ namespace WP_73k;
 /**
  * Set up theme defaults and registers support for various WordPress features.
  *
- * @author Freeshifter LLC
+ * @author Adam Piontek
  * @since 1.0.0
  */
 add_action( 'after_setup_theme', function () {

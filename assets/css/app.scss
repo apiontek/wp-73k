@@ -131,7 +131,7 @@ a {
 }
 
 /* front page styles */
-#front-page img.wp-post-image {
+#tek-front-page img.wp-post-image {
   @extend .img-fluid;
   @extend .border;
   // @extend .border-20;
@@ -140,11 +140,50 @@ a {
   border-width: 18px !important;
   width: 100%;
 }
-#front-page h2 {
+#tek-front-page h2, header h2 {
   @extend .fs-2;
   @extend .fw-600;
   @extend .mb-0;
 }
+
+/* resume styles */
+.tek-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $gray-400;
+  font-family: $font-family-monospace;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid $secondary;
+  }
+  &:not(:empty)::before {
+    margin-right: 0.5em;
+  }
+  &:not(:empty)::after {
+    margin-left: 0.33em;
+  }
+}
+#tek-page-resume {
+  .tek-qualifications {
+    margin-bottom: 2rem;
+  }
+  .tek-employer {
+    @extend .border-bottom;
+    @extend .border-gray;
+    border-bottom-style: dashed !important;
+  }
+}
+
+
 
 /* social icons */
 #social-icons .link-light {
@@ -193,29 +232,6 @@ blockquote {
   }
 }
 
-/* resume separators */
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: $gray-400;
-  font-family: $font-family-monospace;
-  font-size: smaller;
-  text-transform: uppercase;
-  font-weight: 700;
-  &::before,
-  &::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid $secondary;
-  }
-  &:not(:empty)::before {
-    margin-right: 0.5em;
-  }
-  &:not(:empty)::after {
-    margin-left: 0.33em;
-  }
-}
 
 /* blog */
 .post-title a {

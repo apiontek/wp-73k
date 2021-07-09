@@ -74,7 +74,7 @@ function get_social_icons_prof() {
 }
 
 function social_icons_str($icons_arr) {
-  $out_str = '<div id="social-icons" class="mt-1">';
+  $out_str = '<div id="social-icons">';
   foreach ($icons_arr as $i=>$social) {
     $pad = $i == 0 ? 'pe-1' : ($i == (count($icons_arr) - 1) ? 'ps-1' : 'px-1');
     $out_str .= '<a href="' . $social['url'] . '" rel="noreferrer" target="' . $social['target'];

@@ -1,8 +1,8 @@
 <?php
 /**
- * The default single page template.
+ * The 73k theme static front page style
  *
- * @author Freeshifter LLC
+ * @author Adam Piontek
  * @since 1.0.0
  */
 
@@ -10,7 +10,7 @@ namespace WP_73k;
 
 get_header('', array('fixednav'=>true)); ?>
 <main class="container-fluid h-100 d-flex justify-content-center align-items-center">
-  <div class="d-flex flex-column-reverse flex-lg-row align-items-lg-end mt-5" id="front-page">
+  <div class="d-flex flex-column-reverse flex-lg-row align-items-lg-end mt-5" id="tek-front-page">
 
   <?php
     if ( have_posts() ) {

@@ -2,7 +2,7 @@
 /**
  * The default single page template.
  *
- * @author Freeshifter LLC
+ * @author Adam Piontek
  * @since 1.0.0
  */
 
