@@ -1,6 +1,6 @@
 <?php
 /**
- * The default single page template.
+ * The default archive page template.
  *
  * @author Adam Piontek
  * @since 1.0.0
@@ -12,7 +12,11 @@ get_header(); ?>
 <main class="container d-flex justify-content-center">
   <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7 pb-2 mb-4 mt-3">
 
+    <?php if (is_archive()) { ?>
+    <h1 class="text-gray-300 fst-italic mb-4 tek-border-bottom-gray-dashed"><?= get_the_archive_title(); ?></h1>
+
     <?php
+      }
       if ( have_posts() ) {
         while ( have_posts() ) {
           the_post();

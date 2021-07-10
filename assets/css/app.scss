@@ -51,9 +51,6 @@ a {
   border-bottom: none !important;
 }
 
-/* navbar menus */
-// nav.navbar ul.navbar-nav li.menu-item
-
 /* more */
 .border-gray-900 {
   border-color: $gray-900 !important;
@@ -105,6 +102,12 @@ a {
   @extend .mb-0;
   margin-top: -0.5rem;
 }
+.tek-border-bottom-gray-dashed {
+  @extend .border-bottom;
+  // @extend .border-gray;
+  border-bottom-color: $gray-500 !important;
+  border-bottom-style: dashed !important;
+}
 
 /* front page styles */
 #tek-front-page img.wp-post-image {
@@ -153,9 +156,9 @@ a {
     margin-bottom: 2rem;
   }
   .tek-employer {
-    @extend .border-bottom;
-    @extend .border-gray;
-    border-bottom-style: dashed !important;
+    @extend .tek-border-bottom-gray-dashed;
+    @extend .text-gray-300;
+    @extend .fst-italic;
   }
 }
 
