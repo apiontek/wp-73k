@@ -40,10 +40,17 @@
   - [ ] tag archives?
   - [ ] search?
   - [ ] meta? etc?
+  - [ ] sidebar.php ??
 - [ ] search field up top somewhere?
+  - [ ] search.php ??
+- [ ] comments.php & article post handling (form, styling, etc?)
+- [ ] 404.php
+  - [ ] NGINX SNIPPETS - bring in for testing!
+  - [ ] nginx 404 handling?
+  - [ ] nginx 50x handling! - nginx purposefully generate 505 errors somehow?
 - [ ] double-check npm run build output to ensure it's all working
+  - [ ] disable WP/SCRIPT DEBUG
 - [ ] ...
-- [ ] profit!
 - [ ] TRANSFER TO PRODUCTION
   - [ ] content/settings (db export?)
   - [ ] nginx config w/special root files
