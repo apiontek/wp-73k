@@ -43,10 +43,10 @@
   - [X] ~~*sidebar.php ??*~~ [2021-07-10]
 - [X] ~~*search field up top somewhere?*~~ [2021-07-10]
   - [X] ~~*search.php ??*~~ [2021-07-10]
-- [ ] 404.php
-  - [ ] NGINX SNIPPETS - bring in for testing!
-  - [ ] nginx 404 handling?
-  - [ ] nginx 50x handling! - nginx purposefully generate 505 errors somehow?
+- [X] ~~*404.php*~~ [2021-07-10]
+  - [X] ~~*NGINX SNIPPETS - bring in for testing!*~~ [2021-07-10]
+  - [X] ~~*nginx 404 handling?*~~ [2021-07-10]
+  - [X] ~~*nginx 50x handling! - nginx purposefully generate 505 errors somehow?*~~ [2021-07-10]
 - [ ] double-check npm run build output to ensure it's all working
   - [ ] disable WP/SCRIPT DEBUG
 - [ ] ...

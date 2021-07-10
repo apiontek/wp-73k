@@ -14,6 +14,8 @@ import "../../node_modules/@mdi/svg/svg/typewriter.svg";
 import "../../node_modules/@mdi/svg/svg/calendar-clock.svg";
 import "../../node_modules/@mdi/svg/svg/tag-multiple.svg";
 import "../../node_modules/@mdi/svg/svg/rss.svg";
+import "../../node_modules/@mdi/svg/svg/account-hard-hat.svg";
+import "../../node_modules/@mdi/svg/svg/open-in-new.svg";
 import "../../node_modules/@mdi/svg/svg/magnify.svg";
 // social
 import "../../node_modules/@mdi/svg/svg/linkedin.svg";

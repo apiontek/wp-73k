@@ -44,11 +44,22 @@ namespace WP_73k;
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <?php wp_head(); ?>
+  <?php if (is_404()) : ?>
+    <style>
+      body {
+        background: url(<?php echo get_stylesheet_directory_uri() . '/dist/images/40x_rainbow.jpg'; ?>);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    </style>
+  <?php endif; ?>
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
 
-<nav class="navbar <?php echo ($args['fixednav'] ? 'fixed-top' : ''); ?> navbar-expand-lg navbar-dark bg-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
+<nav class="navbar <?php echo ($args['fixednav'] ? 'fixed-top' : ''); ?> navbar-expand-lg navbar-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
   <div class="container-fluid">
 
     <h1 class="my-0 py-0 lh-base">

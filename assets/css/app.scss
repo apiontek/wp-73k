@@ -255,6 +255,9 @@ blockquote {
     @extend .py-3;
     max-width: 25rem;
   }
+  ul {
+    padding-inline-start: 2rem;
+  }
   .wp-block-loginout {
     display: list-item;
     margin-left: 2rem;
@@ -272,6 +275,10 @@ blockquote {
 .search-form .form-control:focus {
   border-color: $input-focus-border-color;
 }
+.form-control::-ms-clear,
+input.form-control::-ms-clear,
+.form-control::-ms-reveal,
+input.form-control::-ms-reveal { display: none; }
 .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    $gray-500    !important;
 }
@@ -291,6 +298,10 @@ blockquote {
 }
 .form-control::placeholder { /* Most modern browsers support this now. */
   color:    $gray-500    !important;
+}
+.search-form .btn-outline-light {
+  color: $gray-300;
+  border-color: $gray-500;
 }
 .search-form .btn-outline-light:hover {
   color: $primary;

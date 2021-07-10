@@ -182,6 +182,11 @@ function getCSSWhitelistPatterns() {
     /^children(-.*)?$/,
     /^hljs(-.*)?$/,
     /^tek(-.*)?$/,
+    /^html$/,
+    /^body$/,
+    /^blockquote$/,
+    /^ul$/,
+    /^h.$/,
   ];
 }
 
