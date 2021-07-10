@@ -18,6 +18,14 @@ get_header(); ?>
           the_post();
           echo get_template_part( 'content-templates/content', 'article' );
         }
+    ?>
+
+      <nav class="d-flex justify-content-between" aria-label="Page navigation">
+        <div class="nav-previous alignleft"><?php next_posts_link( '&larr; Older' ); ?></div>
+        <div class="nav-next alignright"><?php previous_posts_link( 'Newer &rarr;' ); ?></div>
+      </nav>
+
+    <?php
       }
     ?>
 

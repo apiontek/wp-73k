@@ -32,12 +32,11 @@ namespace WP_73k;
 
     <?php
       if (has_tag()) {
-        echo '<div class="post-tags fs-smaller mb-4">' . svg_icon_use("mdi-tag-multiple", "icon baseline text-gray-300 me-1");
+        echo '<div class="post-tags fs-smaller mb-4">';
+        echo svg_icon_use("mdi-tag-multiple", "icon baseline text-gray-300 me-1");
 
         $tag_strings = array_map(function ($tag) {
-          $tag_str = '<span class="text-gray-300">#</span>';
-          $tag_str .= '<a href="' . get_bloginfo('url') . '/tag/' . $tag->slug . '">' . $tag->name . '</a>';
-          return $tag_str;
+          return '<span class="text-gray-300">#</span><a href="' . get_tag_link($tag) . '">' . $tag->name . '</a>';
         }, get_the_tags());
 
         echo implode(", ", $tag_strings) . '</div>';
