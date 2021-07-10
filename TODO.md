@@ -34,16 +34,15 @@
 - [X] ~~*SYNTAX HIGHLIGHTING PLUGIN*~~ [2021-07-10]
   - [X] ~~*wrapping lines now? how to ensure nowrap?*~~ [2021-07-10]
 - [X] ~~*add remaining content*~~ [2021-07-10]
-- [ ] blog pagination?
-- [ ] footer 'sidebar' (blog-only)?
-  - [ ] date archives?
-  - [ ] tag archives?
-  - [ ] search?
-  - [ ] meta? etc?
-  - [ ] sidebar.php ??
-- [ ] search field up top somewhere?
-  - [ ] search.php ??
-- [ ] comments.php & article post handling (form, styling, etc?)
+- [X] ~~*blog pagination?*~~ [2021-07-10]
+- [X] ~~*footer 'sidebar' (blog-only)?*~~ [2021-07-10]
+  - [X] ~~*date archives?*~~ [2021-07-10]
+  - [X] ~~*tag archives?*~~ [2021-07-10]
+  - [X] ~~*search?*~~ [2021-07-10]
+  - [X] ~~*meta? etc?*~~ [2021-07-10]
+  - [X] ~~*sidebar.php ??*~~ [2021-07-10]
+- [X] ~~*search field up top somewhere?*~~ [2021-07-10]
+  - [X] ~~*search.php ??*~~ [2021-07-10]
 - [ ] 404.php
   - [ ] NGINX SNIPPETS - bring in for testing!
   - [ ] nginx 404 handling?
@@ -58,6 +57,7 @@
   - [ ] jetpack? markdown from that one?
   - [ ] caching? lighthouse report (cat-roof webp, woff2 fonts)
     - [ ] [info](https://wordpress.org/support/article/optimization/#browser-caching)
+- [ ] comments.php & article post handling (form, styling, etc?)
   - [ ] comments? discussion?
   - [ ] indieweb stuff?
 - [ ] use wordpress for filebrowser login auth?

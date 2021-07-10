@@ -8,13 +8,11 @@ namespace WP_73k;
 add_action( 'widgets_init', function () {
 
   register_sidebar( [
-    'name'          => esc_html( 'Sidebar' ),
-    'id'            => 'sidebar',
-    'description'   => '',
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widget-title">',
-    'after_title'   => '</h4>',
+    'name'            => esc_html( 'Footer' ),
+    'id'              => 'footer-widgets',
+    'description'     => 'Blog page footer area for widgets',
+    'before_widget'   => '<section id="%1$s" class="%2$s widget">',
+    'after_widget'    => '</section>',
   ] );
 
 } );

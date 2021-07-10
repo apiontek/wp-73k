@@ -33,4 +33,4 @@ get_header('', array('fixednav'=>true)); ?>
   </div>
 </main>
 <?php
-get_footer();
+get_footer('', array('frontpage'=>true));

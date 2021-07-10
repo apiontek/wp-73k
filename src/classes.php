@@ -81,3 +81,16 @@ add_filter( 'document_title_separator', function ( $separator ) {
 add_filter('document_title_parts', function ($title) {
   return (is_home() || is_front_page()) ? $title : array_reverse($title);
 });
+
+
+/**
+ * Exclude pages from WordPress Search
+ */
+if (!is_admin()) {
+  add_filter('pre_get_posts',function($query) {
+    if ($query->is_search) {
+      $query->set('post_type', 'post');
+    }
+    return $query;
+  });  
+}

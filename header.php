@@ -6,7 +6,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Freeshifter
+ * @package AdamPion73k
  */
 
 namespace WP_73k;
@@ -75,6 +75,12 @@ namespace WP_73k;
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+      <?php if (!is_page()) : ?> 
+        <div class="d-none d-lg-flex ms-2">
+          <?php echo get_search_form(); ?>
+        </div>
+      <?php endif; ?>
+
       <?php
         if ( has_nav_menu( 'primary' ) ) {
           wp_nav_menu([
@@ -91,6 +97,12 @@ namespace WP_73k;
           ]);
         }
       ?>
+
+      <?php if (!is_page()) : ?> 
+        <div class="d-flex d-lg-none mt-2">
+          <?php echo get_search_form(); ?>
+        </div>
+      <?php endif; ?>
 
     </div>
 

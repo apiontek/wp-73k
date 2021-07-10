@@ -1,9 +1,10 @@
 // Colors
-$primary: #e48663;
-$secondary: #00b0b0;
-$success: #99c24d;
-$info: #b489c7;
-$warning: #f4d35e;
+// -- now defined in bs-custom --
+// $primary: #e48663;
+// $secondary: #00b0b0;
+// $success: #99c24d;
+// $info: #b489c7;
+// $warning: #f4d35e;
 
 $white: #fff;
 $gray-100: #e8e8e8;
@@ -35,10 +36,6 @@ $custom-colors: (
   "gray-dark": $gray-800,
 );
 
-// $custom-colors: (
-//   "custom-color": #900
-// );
-
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
@@ -48,3 +45,4 @@ $navbar-dark-hover-color: rgba($white, 0.9);
 $navbar-dark-active-color: $white;
 $navbar-dark-disabled-color: rgba($white, 0.45);
 $navbar-dark-toggler-border-color: rgba($white, 0.3);
+$component-active-bg: $primary;

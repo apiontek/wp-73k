@@ -88,8 +88,11 @@ a {
 .fs-smaller {
   font-size: smaller;
 }
-.footer73k {
-  position: fixed !important;
+.tek-fixed-footer {
+  @extend .bg-dark;
+  @extend .bottom-0;
+  @extend .end-0;
+  @extend .position-fixed;
   font-size: 14px !important;
   border-top-left-radius: 0.3rem !important;
   padding-top: 2px;
@@ -100,7 +103,7 @@ a {
   @extend .font-monospace;
   @extend .text-gray-300;
   @extend .mb-0;
-  margin-top: -0.5rem;
+  // margin-top: -0.5rem;
 }
 .tek-border-bottom-gray-dashed {
   @extend .border-bottom;
@@ -234,4 +237,59 @@ blockquote {
 }
 .more-link {
   @extend .fs-6;
+}
+
+/* widget styling */
+#footer-widgets {
+  background-color: $gray-750;
+  border-radius: .5em;
+  .widgettitle {
+    @extend .fs-4;
+  }
+  .wp-block-group {
+    @extend .px-3;
+    @extend .py-3;
+    max-width: 25rem;
+  }
+  .wp-block-loginout {
+    display: list-item;
+    margin-left: 2rem;
+    list-style-type: disc;
+  }
+}
+.wp-block-tag-cloud {
+  @extend .mb-0;
+}
+.search-form .form-control {
+  color: $gray-100 !important;
+  background-color: $gray-800 !important;
+  border-color: $gray-500;
+}
+.search-form .form-control:focus {
+  border-color: $input-focus-border-color;
+}
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    $gray-500    !important;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    $gray-500    !important;
+  opacity:  1;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    $gray-500    !important;
+  opacity:  1;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    $gray-500    !important;
+}
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color:    $gray-500    !important;
+}
+.form-control::placeholder { /* Most modern browsers support this now. */
+  color:    $gray-500    !important;
+}
+.search-form .btn-outline-light:hover {
+  color: $primary;
+  background-color: inherit;
+  border-color: $secondary;
 }
