@@ -185,8 +185,16 @@ function getCSSWhitelistPatterns() {
     /^html$/,
     /^body$/,
     /^blockquote$/,
+    /^input$/,
+    /^svg$/,
+    /^img$/,
     /^ul$/,
+    /^li$/,
+    /^p$/,
+    /^a$/,
     /^h.$/,
+    /^pre$/,
+    /^code$/,
   ];
 }
 
