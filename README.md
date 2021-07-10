@@ -21,22 +21,22 @@ The theme uses Webpack as its bundler with ES6 modules for JavaScript files. It 
 
 ## Hamburgers
 
-The sass for the hamburgers package throws warnings unless fixed:
+The sass for the hamburgers package throws warnings unless fixed, so do this before first `npm run` attempts:
 
 ```bash
 npm i -g sass-migrator
 HBPATH="./node_modules/hamburgers/_sass/hamburgers/"
 find ${HBPATH} -type f | while read f; do npx sass-migrator division -d ${f}; done
-```
-
-Clean node_modules testing:
-
-```bash
+# if cleaning node_modules & dist:
 rm -rf node_modules && rm -rf dist && npm i && HBPATH="./node_modules/hamburgers/_sass/hamburgers/"
 find ${HBPATH} -type f | while read f; do npx sass-migrator division -d ${f}; done
-NODE_ENV=development node --trace-deprecation node_modules/webpack/bin/webpack.js
-NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js
 ```
+
+## Syntax Highlighting
+
+This theme supports server-side syntax highlighting via the [Syntax-highlighting Code Block](https://wordpress.org/plugins/syntax-highlighting-code-block/) plugin. In `classes.php` the plugin-provided styling is disabled, and the theme incorporates sass styling from the highlight.js node package, imported in `_code-highlight.scss` (to change the highlight style, change the import there).
+
+However, the plugin doesn't support highlighting inline code, but I like that option, so the theme also incorporates highlight.js in `main.js` with a DOM Loaded action to highlight any code blocks tagged with the class `to-highlight` (must also have `language-$LANG` class) -- this should be done in WordPress in the editor, where you can edit a paragraph as HTML and add the classes (e.g. `<code class="to-highlight language-python">`).
 
 ## Static Files via nginx
 

@@ -19,6 +19,7 @@
     "@popperjs/core": "^2.x",
     "bootstrap": "^5.x",
     "hamburgers": "^1.x",
+    "highlight.js": "^11.1.0",
     "regenerator": "^0.14.7"
   },
   "devDependencies": {

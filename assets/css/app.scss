@@ -13,32 +13,8 @@
 /* Navbar custom styling */
 @import "nav-bar-help";
 
-/*
- * Code syntax highlighting
- * Actual highlighting is done by plugin
- * "Syntax-highlighting Code Block (with Server-side Rendering)"
- * url: https://wordpress.org/plugins/syntax-highlighting-code-block/
- *
- * highlighting style is set in classes.php by adding filter to
- * 'syntax_highlighting_code_block_style'
- */
-pre, code, .font-monospace {
-  font-family: $font-family-monospace;
-  font-weight: 300;
-  font-size: 15px;
-}
-code.hljs {
-  padding: 0.4rem 0.75rem;
-  border-radius: .5em;
-//   background-color: #1c1c1c;
-}
-p code, li code {
-  background-color: #1d1f21;
-  color: #c5c8c6;
-  padding: .2em .4em .1em;
-  border-radius: .25em;
-  display: inline;
-}
+/* Code block & inline syntax highlighting */
+@import "code-highlight";
 
 /* main */
 html,

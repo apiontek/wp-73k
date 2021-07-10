@@ -180,6 +180,7 @@ function getCSSWhitelistPatterns() {
     /^(.*)?-?paged(-.*)?$/,
     /^depth(-.*)?$/,
     /^children(-.*)?$/,
+    /^hljs(-.*)?$/,
     /^tek(-.*)?$/,
   ];
 }

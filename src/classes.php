@@ -67,15 +67,9 @@ add_filter( 'wp_nav_menu_objects', function($items, $args) {
 }, 1, 2 );
 
 /**
- * Filter for syntax-highlighting-code-block plugin style theme
+ * Filter to remove syntax-highlighting-code-block plugin styles from frontend 
  */
-add_filter(
-	'syntax_highlighting_code_block_style',
-	function() {
-		// return 'tomorrow-night-eighties';
-		return 'tomorrow-night';
-	}
-);
+add_filter('syntax_highlighting_code_block_styling', '__return_false');
 
 
 /**
@@ -84,7 +78,6 @@ add_filter(
 add_filter( 'document_title_separator', function ( $separator ) {
   return '\\';
 } );
-
 add_filter('document_title_parts', function ($title) {
   return (is_home() || is_front_page()) ? $title : array_reverse($title);
 });

@@ -1,0 +1,40 @@
+/*
+ * Code syntax highlighting
+ * <pre><code> highlighting is done server-side
+ *   by plugin 'Syntax-highlighting Code Block'
+ *   url: https://wordpress.org/plugins/syntax-highlighting-code-block/
+ *
+ * <code> inline highlighting done client-side
+ *   by highlight.js in main.js, where languages
+ *   have to be imported & enabled to work for inline
+ */
+
+@import '../../node_modules/highlight.js/scss/base16/eighties.scss';
+
+.wp-block-code {
+  .shcb-language {
+    @extend .d-none;
+  }
+}
+.hljs {
+  background-color: #1c1c1c;
+  color: #cacaca;
+}
+pre, code, .font-monospace {
+  font-family: $font-family-monospace;
+  font-weight: 300;
+  font-size: 15px;
+}
+pre code.hljs {
+  padding: 0.4rem 0.75rem;
+  border-radius: .5em;
+  white-space: unset;
+  overflow-wrap: unset;
+}
+code {
+  @extend .hljs;
+}
+p code.hljs, p code, li code {
+  padding: .2em .4em .1em;
+  border-radius: .25em;
+}

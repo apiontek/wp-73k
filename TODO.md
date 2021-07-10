@@ -31,8 +31,16 @@
 - [X] ~~*re-do Front Page as content from within WP?*~~ [2021-07-09]
   - [X] ~~*using 'featured image' or some such?*~~ [2021-07-09]
   - [X] ~~*using shortcode for social icons?*~~ [2021-07-09]
-- [ ] figure out Search
-- [ ] Recipes & trip logs w/images? Videos?
+- [ ] SYNTAX HIGHLIGHTING PLUGIN
+  - [ ] wrapping lines now? how to ensure nowrap?
+- [ ] add remaining content
+- [ ] blog pagination?
+- [ ] footer 'sidebar' (blog-only)?
+  - [ ] date archives?
+  - [ ] tag archives?
+  - [ ] search?
+  - [ ] meta? etc?
+- [ ] search field up top somewhere?
 - [ ] double-check npm run build output to ensure it's all working
 - [ ] ...
 - [ ] profit!
@@ -47,6 +55,7 @@
   - [ ] indieweb stuff?
 - [ ] use wordpress for filebrowser login auth?
 - [ ] Portfolio: just a blog category view of project blog posts?
-- [ ] add recipe posts
+- [ ] figure out Search
+- [ ] Recipes & trip logs w/images? Videos?
 - [ ] add some code/notes posts of things I've learned?
 - [ ] other ideas?
