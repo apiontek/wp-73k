@@ -6,7 +6,7 @@ The WordPress theme for 73k.us, based on Bootstrap 5 and PurgeCSS.
 - [Composer](https://getcomposer.org)
 
 ## How to get started
-1. Clone or [download](https://github.com/AdamPion73k/wp-73k/archive/master.zip "Download the WP Tailwind Zip") the project onto your `themes` directory `(./wp-content/themes)`
+1. Clone or [download](https://github.com/apiontek/wp-73k/archive/refs/heads/master.zip "Download the WP 73k Zip") the project onto your `themes` directory `(./wp-content/themes)`
 2. Run a find/replace for the following strings:
 - `wp-73k`
 - `WP_73k`
