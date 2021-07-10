@@ -31,9 +31,9 @@
 - [X] ~~*re-do Front Page as content from within WP?*~~ [2021-07-09]
   - [X] ~~*using 'featured image' or some such?*~~ [2021-07-09]
   - [X] ~~*using shortcode for social icons?*~~ [2021-07-09]
-- [ ] SYNTAX HIGHLIGHTING PLUGIN
-  - [ ] wrapping lines now? how to ensure nowrap?
-- [ ] add remaining content
+- [X] ~~*SYNTAX HIGHLIGHTING PLUGIN*~~ [2021-07-10]
+  - [X] ~~*wrapping lines now? how to ensure nowrap?*~~ [2021-07-10]
+- [X] ~~*add remaining content*~~ [2021-07-10]
 - [ ] blog pagination?
 - [ ] footer 'sidebar' (blog-only)?
   - [ ] date archives?
