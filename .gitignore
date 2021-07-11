@@ -2,3 +2,7 @@ node_modules
 vendor
 dist
 .DS_Store
+NOTES.md
+assets/_root/thats*gif
+assets/_root/*palpha.jpg
+assets/_root/*_public_key.asc
