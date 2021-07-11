@@ -79,7 +79,7 @@ function social_icons_str($icons_arr) {
     $pad = $i == 0 ? 'pe-1' : ($i == (count($icons_arr) - 1) ? 'ps-1' : 'px-1');
     $out_str .= '<a href="' . $social['url'] . '" rel="noreferrer" target="' . $social['target'];
     $out_str .= '" class="fs-3 link-light text-decoration-none ' . $pad . '">';
-    $out_str .= svg_icon_use($social['icon'], "icon baseline") . "</a>";
+    $out_str .= svg_icon_use($social['icon'], "baseline") . "</a>";
   }
   return $out_str . '</div>';
 }

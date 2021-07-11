@@ -22,7 +22,7 @@ get_header(); ?>
       <header>
         <h2>
         <?php
-          echo svg_icon_use('mdi-account', 'icon baseline');
+          echo svg_icon_use('mdi-account', 'baseline');
           echo ' ' . get_the_author_meta('display_name');
           ?>
         </h2>

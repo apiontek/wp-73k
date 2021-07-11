@@ -21,7 +21,7 @@ $seventythreek_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . es
     <label id="<?php echo esc_attr( $seventythreek_unique_id ) . '-label'; ?>" for="<?php echo esc_attr( $seventythreek_unique_id ); ?>" aria-hidden class="form-label d-none"><?php _e( 'Search&hellip;', 'seventythreek' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
     <input type="search" id="<?php echo esc_attr( $seventythreek_unique_id ); ?>" class="form-control me-2 tek-search-input" value="<?php echo get_search_query(); ?>" name="s" aria-labelledby="<?php echo esc_attr( $seventythreek_unique_id ) . '-label'; ?>" placeholder="Search blog&hellip;" />
     <button type="submit" class="btn btn-outline-light" title="Search">
-      <?php echo svg_icon_use('mdi-magnify', 'icon baseline'); ?>
+      <?php echo svg_icon_use('mdi-magnify', 'baseline'); ?>
     </button>
   </div>
 </form>

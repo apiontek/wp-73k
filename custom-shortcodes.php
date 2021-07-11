@@ -27,7 +27,7 @@ function single_social_icon_function( $atts = array() ) {
   // set up default parameter
   extract(shortcode_atts(array(
     'name' => '0',
-    'class' => 'icon baseline'
+    'class' => 'baseline'
   ), $atts));
 
   if ($name == '0') {
