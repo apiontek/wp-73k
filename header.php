@@ -59,7 +59,7 @@ namespace WP_73k;
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
 
-<nav class="navbar <?php echo ($args['fixednav'] ? 'fixed-top' : ''); ?> navbar-expand-lg navbar-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
+<nav class="navbar navbar-expand-lg navbar-dark px-1 px-sm-2 px-lg-3 px-xl-4 px-xxl-5 py-3">
   <div class="container-fluid">
 
     <h1 class="my-0 py-0 lh-base">
