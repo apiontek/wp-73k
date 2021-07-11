@@ -128,17 +128,17 @@ if (process.env.SERVER) {
   config.plugins.push(
     new BrowserSyncPlugin(
       {
-        proxy: 'https://dev1.73k.us',
+        proxy: process.env.BSYNC_PROXY || 'localhost',
         files: [
           '**/*.php',
           '**/*.scss'
         ],
-        port: 9765,
-        host: '172.22.1.2',
-        listen: '172.22.1.2',
+        port: process.env.BSYNC_PORT || 8080,
+        host: process.env.BSYNC_HOST || '127.0.0.1',
+        listen: process.env.BSYNC_LISTEN || '0.0.0.0',
         notify: false,
         open: false,
-        ui: { port: 9760 }
+        ui: { port: process.env.BSYNC_UI_PORT || 8081 }
       }
     )
   )
