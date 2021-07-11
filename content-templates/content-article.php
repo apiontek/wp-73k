@@ -13,7 +13,7 @@ namespace WP_73k;
   <header>
     <h2 class="post-title fs-2 fw-600 mb-2">
     <?php
-      if ( is_archive() || is_home() ) {
+      if ( is_archive() || is_search() || is_home() ) {
         printf( '<a href="%s" rel="bookmark">%s</a>',
           esc_url( get_the_permalink() ),
           esc_html( get_the_title() )
