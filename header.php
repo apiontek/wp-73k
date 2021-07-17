@@ -35,7 +35,6 @@ namespace WP_73k;
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/favicon-32x32.png'; ?>">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/favicon-16x16.png'; ?>">
   <link rel="manifest" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/site.webmanifest'; ?>">
-  <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri() . '/dist/images/safari-pinned-tab.svg'; ?>" color="#78868a">
   <meta name="apple-mobile-web-app-title" content="73k">
   <meta name="application-name" content="73k">
   <meta name="msapplication-TileColor" content="#2b5797">
