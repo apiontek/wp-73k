@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^4.x",
-    "@fontsource/open-sans": "^4.x",
     "@fontsource/righteous": "^4.x",
     "@fontsource/source-serif-pro": "^4.x",
     "@mdi/svg": "^5.x",
