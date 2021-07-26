@@ -27,13 +27,13 @@ function single_social_icon_function( $atts = array() ) {
   // set up default parameter
   extract(shortcode_atts(array(
     'name' => '0',
-    'class' => 'baseline'
+    'class' => 'icon baseline'
   ), $atts));
 
   if ($name == '0') {
     return 'social_icon shortcode requires "name" parameter, like "name=mdi-account"';
   } else {
-    return svg_icon_use($name, $class);
+    return inline_svg( $name, array( 'div_class' => $class ) );
   }
 }
 add_shortcode('social_icon', 'single_social_icon_function');

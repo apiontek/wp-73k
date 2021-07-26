@@ -67,7 +67,7 @@ namespace WP_73k;
           esc_url( home_url( '/' ) )
         );
 
-        echo svg_icon_use("mdi-desktop-classic", "baseline");
+        echo inline_svg( 'mdi-desktop-classic', array( 'div_class' => 'icon baseline' ) );
 
         printf( '<span class="fw-light font-brand">\\\\%1$s</span>',
           esc_html( get_bloginfo( 'name' ) )

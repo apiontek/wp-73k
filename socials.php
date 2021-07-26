@@ -19,7 +19,7 @@ $social_icons = array(
     'target' => "_blank"
   ),
   array('icon' => "mdi-github", 'url' => "https://github.com/apiontek", 'prof' => true, 'target' => "_blank"),
-  array('icon' => "gitea", 'url' => "https://73k.us/git/adam", 'prof' => true, 'target' => "_blank"),
+  array('icon' => "svg-gitea", 'url' => "https://73k.us/git/adam", 'prof' => true, 'target' => "_blank"),
   array(
     'icon' => "mdi-key-variant",
     'url' => '/DF185CEE29A3D443_public_key.asc',
@@ -79,7 +79,7 @@ function social_icons_str($icons_arr) {
     $pad = $i == 0 ? 'pe-1' : ($i == (count($icons_arr) - 1) ? 'ps-1' : 'px-1');
     $out_str .= '<a href="' . $social['url'] . '" rel="noreferrer" target="' . $social['target'];
     $out_str .= '" class="fs-3 link-light text-decoration-none ' . $pad . '">';
-    $out_str .= svg_icon_use($social['icon'], "baseline") . "</a>";
+    $out_str .= inline_svg($social['icon'], array( 'div_class' => 'icon baseline' ) ) . "</a>";
   }
   return $out_str . '</div>';
 }

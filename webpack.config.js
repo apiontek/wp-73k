@@ -3,7 +3,6 @@ const glob                  = require("glob-all");
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const CssMinimizerPlugin    = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin     = require('copy-webpack-plugin');
-const SpriteLoaderPlugin    = require("svg-sprite-loader/plugin");
 const BrowserSyncPlugin     = require('browser-sync-webpack-plugin');
 const PurgecssPlugin        = require("purgecss-webpack-plugin");
 
@@ -50,27 +49,32 @@ const config = {
       },
       {
         test: /\.svg$/,
-        loader: "svg-sprite-loader",
-        options: {
-          extract: true,
-          spriteFilename: "icon-sprites.svg",
-          publicPath: "./images/",
-          symbolId: (filePath) => {
-            if (filePath.includes("bootstrap-icons")) {
-              return `bi-${path.basename(filePath).slice(0, -4)}`;
-            } else if (filePath.includes("@mdi")) {
-              return `mdi-${path.basename(filePath).slice(0, -4)}`;
-            } else if (filePath.includes("heroicons")) {
-              if (filePath.includes("outline")) {
-                return `hio-${path.basename(filePath).slice(0, -4)}`;
+        type: 'asset/resource',
+        generator: {
+          filename: (pathData) => {
+            if (pathData.filename.includes('@mdi')) {
+              return 'images/mdi-[name][ext]';
+            } else if (pathData.filename.includes("bootstrap-icons")) {
+              return 'images/bsi-[name][ext]';
+            } else if (pathData.filename.includes("heroicons")) {
+              if (pathData.filename.includes("outline")) {
+                return 'images/hio-[name][ext]';
               } else {
-                return `his-${path.basename(filePath).slice(0, -4)}`;
+                return 'images/his-[name][ext]';
               }
             } else {
-              return `${path.basename(filePath).slice(0, -4)}`;
+              return 'images/svg-[name][ext]';
             }
           },
         },
+        use: [
+          {
+            loader: 'svgo-loader',
+            options: {
+              configFile: path.resolve('svgo.config.js'),
+            }
+          }
+        ],
       },
     ]
   },
@@ -86,7 +90,6 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: `[name]${prefix}.css` }),
-    new SpriteLoaderPlugin({ plainSprite: true }),
     new CopyWebpackPlugin({
       patterns: [{
                           from: './assets/images/',

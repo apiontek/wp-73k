@@ -19,9 +19,13 @@ The WordPress theme for 73k.us, based on Bootstrap 5 and PurgeCSS.
 ## Webpack
 The theme uses Webpack as its bundler with ES6 modules for JavaScript files.
 
-### SpriteLoaderPlugin
+### Inline SVGs
 
-SVG icons can be pulled into a sprite file (output to `dist/images/icon-sprites.svg`). For this to work, `@import` them in main.js (see examples). Sprite names are set by the config in `webpack.config.js` with prefixes supported for some icon packs ([@mdi/svg](https://www.npmjs.com/package/@mdi/svg), [bootstrap-icons](https://www.npmjs.com/package/bootstrap-icons), [heroicons](https://www.npmjs.com/package/heroicons)). They can then be used for menus (put `icon-<PREFIX>-<ICON-NAME>` in the class for a menu item), or used in the theme php files with the `svg_icon_use($icon_name, $div_class)` function from `custom-functions.php` to get a div containing the correct svg use tag. `$div_class` should usually include `baseline` for proper layout.
+SVG images and icons can be optimized and injected inline; in order to do this, `@import` them in `main.js` (see that file for examples). Optimized output files are named per config in `webpack.config.js` with prefixes supported for some icon packs ([@mdi/svg](https://www.npmjs.com/package/@mdi/svg), [bootstrap-icons](https://www.npmjs.com/package/bootstrap-icons), [heroicons](https://www.npmjs.com/package/heroicons)), or a default prefix of `svg-`.
+
+Insert one in the theme using `inline_svg()` function defined in `custom-functions.php` -- it takes two arguments: the icon file name (minus `.svg` extension), and a key-value array to handle svg class, outer div with class for icons, and some accessibility options. For standard square icons, use a div class if `icon baseline` - in rare situations just `icon`. For non-icon images, skip the div_class and use an svg_class as needed.
+
+This theme also supports icons in the navbar menu items via setting `icon-<PREFIX>-<ICON-NAME>` in the class field for a menu item in the Wordpress menu editor.
 
 ## Syntax Highlighting
 

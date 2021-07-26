@@ -59,7 +59,7 @@ add_filter( 'wp_nav_menu_objects', function($items, $args) {
     foreach ($object->classes as $c) {
       if (substr( $c, 0, strlen( $svgicon_prefix ) ) === $svgicon_prefix) {
         $icon_slug = str_replace($svgicon_prefix, '', $c);
-        $object->title = svg_icon_use($icon_slug, 'baseline') . "\\" . $object->title;
+        $object->title = inline_svg( $icon_slug, array( 'div_class' => 'icon baseline' ) ) . "\\" . $object->title;
       }
     }
   }
