@@ -1,7 +1,7 @@
 // Import SCSS
 import '../css/app.scss'
 
-// Import icons for sprite-loader
+// Import svg files for webpack handling
 // navbar brand icon
 import "../../node_modules/@mdi/svg/svg/desktop-classic.svg"; // brand
 // other:
