@@ -12,7 +12,7 @@ namespace WP_73k;
 <article 
   id="post-<?php the_ID(); ?>"
   class="<?php 
-    $post_class = 'post border-bottom border-gray pb-4 mb-3';
+    $post_class = 'post border-bottom border-gray pb-4 mb-3 clearfix';
     echo esc_attr( implode( ' ', get_post_class( $post_class ) ) );
     ?>"
   itemscope itemtype="https://schema.org/CreativeWork"
