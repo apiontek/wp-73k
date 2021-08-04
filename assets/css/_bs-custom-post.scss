@@ -1,0 +1,8 @@
+// Merge the color maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+/* general styles */
+$link-color:                              rgba($white, 0.75);
+$link-decoration:                         underline;
+$link-shade-percentage:                   20%;
+$link-hover-color:                        $primary;

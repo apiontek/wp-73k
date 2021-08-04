@@ -9,8 +9,8 @@
 namespace WP_73k;
 
 get_header(); ?>
-<main class="container d-flex justify-content-center">
-  <div class="d-flex flex-column-reverse flex-lg-row align-items-lg-end mt-sm-3 mt-md-4 pt-md-4 mt-lg-5 pt-lg-5 pb-5" id="tek-front-page">
+<main class="container d-flex h-100 justify-content-center align-items-center">
+  <div class="d-flex flex-column-reverse flex-lg-row align-items-lg-end ">
 
   <?php
     if ( have_posts() ) {
@@ -33,4 +33,4 @@ get_header(); ?>
   </div>
 </main>
 <?php
-get_footer('', array('frontpage'=>true));
+get_footer();

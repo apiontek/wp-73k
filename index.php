@@ -13,7 +13,7 @@ get_header(); ?>
   <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7 pb-2 mb-4 mt-3">
 
     <?php if (is_archive()) : ?>
-    <h1 class="text-gray-300 fst-italic mb-4 tek-border-bottom-gray-dashed"><?= get_the_archive_title(); ?></h1>
+    <h1 class="text-muted fst-italic mb-4 tek-border-bottom-gray-dashed"><?= get_the_archive_title(); ?></h1>
 
     <?php
       endif;
@@ -22,18 +22,29 @@ get_header(); ?>
           the_post();
           echo get_template_part( 'content-templates/content', 'article' );
         endwhile;
+
+        // output listing pagination if not singular
+        if (!is_singular()) :
     ?>
 
       <nav class="d-flex justify-content-between" aria-label="Page navigation">
-        <div class="nav-previous alignleft"><?php next_posts_link( '&larr; Older' ); ?></div>
-        <div class="nav-next alignright"><?php previous_posts_link( 'Newer &rarr;' ); ?></div>
+        <div class="nav-previous alignleft">
+          <?php
+            $txt = inline_svg( 'mdi-chevron-left', array( 'div_class' => 'icon baseline me-1' ) ) . 'Older';
+            next_posts_link( $txt ); ?>
+        </div>
+        <div class="nav-next alignright">
+          <?php
+            $txt = 'Newer' . inline_svg( 'mdi-chevron-right', array( 'div_class' => 'icon baseline ms-1' ) );
+            previous_posts_link( $txt ); ?>
+        </div>
       </nav>
 
-    <?php
+    <?php endif;
       endif;
     ?>
 
   </div>
 </main>
 <?php
-get_footer('', array('frontpage'=>false));
+get_footer();

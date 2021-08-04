@@ -13,7 +13,7 @@ namespace WP_73k;
 
 ?>
 
-  <?php
+  <!-- < ?php
     // FIRST: if this is frontpage, we just do the sticky bottom right copyright footer
     if ($args && $args['frontpage']) {
   ?>
@@ -24,18 +24,21 @@ namespace WP_73k;
       </div>
     </footer>
 
-  <?php } else {
+  < ?php } else {
     // Not frontpage? Then show regular footer
-  ?>
+  ?> -->
 
-    <footer class="d-flex flex-column align-items-center mt-2 px-3 py-3">
+    <!-- <footer class="d-flex flex-column align-items-center mt-2 px-3 py-3"> -->
 
-      <?php
+
+    <footer class="footer mt-auto py-3 d-flex flex-column align-items-center">
+
+    <?php
         // widget content for blog content footers:
         if (!is_page()) :
       ?>
 
-      <div id="footer-widgets" class="col-12 col-sm-9 col-md-11 col-lg-10 col-xl-9 col-xxl-8 d-flex flex-column align-items-center">
+      <div id="footer-widgets" class="col-12 col-sm-9 col-md-11 col-lg-10 col-xl-9 col-xxl-8 d-flex flex-column align-items-center mb-3">
         <div class="px-3 pt-3 pb-1">
           <?php echo get_search_form(); ?>
         </div>
@@ -55,12 +58,17 @@ namespace WP_73k;
         // Regular footer content for all but front page:
         ?>
 
-      <span class="text-gray-400 mt-3">&copy; Copyright <?php echo date("Y") ?> Adam Piontek</span>
 
+      <span class="text-muted fs-smaller">&copy; <?php echo date("Y") ?> Adam Piontek</span>
 
     </footer>
 
-  <?php } ?>
+
+      <!-- <span class="text-gray-400 mt-3">&copy; Copyright <?php echo date("Y") ?> Adam Piontek</span>
+
+    </footer> -->
+
+  <!-- < ?php } ?> -->
 
   <?php wp_footer(); ?>
 

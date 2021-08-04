@@ -1,0 +1,118 @@
+// Colors
+// scss-docs-start color-variables
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #b489c7;
+$pink:    #d63384;
+$red:     #cf4a50;
+$orange:  #e48663;
+$yellow:  #f4d35e;
+$green:   #99c24d;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+// scss-docs-end color-variables
+
+// define black, white, gray
+$white: #fff;
+$black: #000;
+$gray: #828282; // 6c757d 7d756c
+
+// define gray scale
+$gray-100: tint-color($gray, 80%);
+$gray-200: tint-color($gray, 60%);
+$gray-300: tint-color($gray, 40%);
+$gray-400: tint-color($gray, 20%);
+$gray-500: $gray;
+$gray-600: shade-color($gray, 20%);
+$gray-700: shade-color($gray, 40%);
+$gray-750: shade-color($gray, 50%);
+$gray-800: shade-color($gray, 60%);
+$gray-900: shade-color($gray, 80%);
+
+
+// scss-docs-start theme-color-variables
+$primary: $orange;
+$secondary: #00b0b0;
+$success:       $green;
+$info:          $purple;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-200;
+$dark:          $gray-800;
+// scss-docs-end theme-color-variables
+
+
+// Create your own map
+$custom-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+
+/* custom spacers */
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  '4-2': $spacer * 2,
+  '4-25': $spacer * 2.5,
+  5: $spacer * 3,
+  6: $spacer * 3.5,
+  7: $spacer * 4,
+);
+
+
+/* body, text, components */
+$body-bg: shade-color($gray-800, 10%);
+$body-color: $gray-200;
+$text-muted: $gray-400;
+
+$component-active-color: $dark;
+$component-active-bg: $primary;
+
+$component-hover-color: tint-color($light, 5%);
+$component-hover-bg: rgba($white, .125);
+
+
+/* navbar dark modifications */
+$navbar-dark-color: rgba($white, 0.75);
+$navbar-dark-hover-color: rgba($white, 0.9);
+$navbar-dark-active-color: $white;
+$navbar-dark-disabled-color: rgba($white, 0.45);
+$navbar-dark-toggler-border-color: rgba($white, 0.3);
+
+/* tables */
+$table-bg: $dark;
+
+/* buttons */
+$btn-box-shadow: null;
+
+/* figure captions */
+$figure-caption-color: $gray-400;
+
+/* form inputs */
+$input-bg: shade-color($body-bg, 20%);
+$input-focus-bg: shade-color($body-bg, 20%);
+$input-border-color: $gray-600;
+$input-focus-color: $gray-100;
+$input-placeholder-color: shade-color($gray-600, 15%);
+
+/* pagination */
+$pagination-bg: shade-color($body-bg, 20%);
+$pagination-border-color: $gray-600;
+$pagination-hover-color: tint-color($primary, 10%);
+$pagination-hover-bg: $component-hover-bg;
+$pagination-hover-border-color: $gray-600;
+$pagination-focus-color: tint-color($primary, 10%);
+$pagination-focus-bg: shade-color($body-bg, 20%);

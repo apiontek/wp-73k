@@ -17,6 +17,8 @@ import "../../node_modules/@mdi/svg/svg/rss.svg";
 import "../../node_modules/@mdi/svg/svg/account-hard-hat.svg";
 import "../../node_modules/@mdi/svg/svg/open-in-new.svg";
 import "../../node_modules/@mdi/svg/svg/magnify.svg";
+import "../../node_modules/@mdi/svg/svg/chevron-left.svg";
+import "../../node_modules/@mdi/svg/svg/chevron-right.svg";
 // social
 import "../../node_modules/@mdi/svg/svg/linkedin.svg";
 import "../../node_modules/@mdi/svg/svg/github.svg";
