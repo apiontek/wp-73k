@@ -1,6 +1,6 @@
 {
   "name": "wp-73k-theme",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "WP 73k",
   "main": "./assets/js/main.js",
   "scripts": {
