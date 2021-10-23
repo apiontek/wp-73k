@@ -265,6 +265,15 @@ img,
 figure.wp-caption {
   max-width: 100%;
   height: auto;
+  margin-bottom: 1.5rem;
+}
+.wp-block-image figcaption {
+  margin-top: -1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  color: $text-muted;
 }
 .btn {
   font-family: $font-family-sans-serif;
