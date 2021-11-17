@@ -186,6 +186,7 @@ function getCSSWhitelistPatterns() {
     /^body$/,
     /^figure$/,
     /^blockquote$/,
+    /^is-active$/,
     /^collapse$/,
     /^collapsing$/,
     /^label$/,
