@@ -133,8 +133,8 @@ if (process.env.SERVER) {
         port: process.env.BSYNC_PORT || 8080,
         host: process.env.BSYNC_HOST || '127.0.0.1',
         listen: process.env.BSYNC_LISTEN || '0.0.0.0',
-        notify: false,
-        open: false,
+        // notify: false,
+        // open: false,
         ui: { port: process.env.BSYNC_UI_PORT || 8081 }
       }
     )
