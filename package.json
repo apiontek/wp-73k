@@ -14,7 +14,7 @@
     "@fontsource/jetbrains-mono": "^4.x",
     "@fontsource/righteous": "^4.x",
     "@fontsource/source-serif-pro": "^4.x",
-    "@mdi/svg": "^5.x",
+    "@mdi/svg": "^6.5.95",
     "@popperjs/core": "^2.x",
     "bootstrap": "^5.x",
     "hamburgers": "^1.x",
