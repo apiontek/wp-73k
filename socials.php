@@ -19,7 +19,7 @@ $social_icons = array(
     'target' => "_blank"
   ),
   array('icon' => "mdi-github", 'url' => "https://github.com/apiontek", 'prof' => true, 'target' => "_blank"),
-  array('icon' => "svg-gitea", 'url' => "https://73k.us/git/adam", 'prof' => true, 'target' => "_blank"),
+  array('icon' => "svg-gitea", 'url' => "https://git.73k.us/adam", 'prof' => true, 'target' => "_blank"),
   array(
     'icon' => "mdi-key-variant",
     'url' => '/DF185CEE29A3D443_public_key.asc',
