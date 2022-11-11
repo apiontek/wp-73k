@@ -33,6 +33,12 @@ $social_icons = array(
     'target' => "_blank"
   ),
   array(
+    'icon' => "mdi-mastodon",
+    'url' => "https://kolektiva.social/@adampiontek",
+    'prof' => false,
+    'target' => "_blank"
+  ),
+  array(
     'icon' => "mdi-twitter",
     'url' => "https://twitter.com/adampiontek",
     'prof' => false,
@@ -42,12 +48,6 @@ $social_icons = array(
   array(
     'icon' => "mdi-instagram",
     'url' => "https://www.instagram.com/adampiontek/",
-    'prof' => false,
-    'target' => "_blank"
-  ),
-  array(
-    'icon' => "mdi-steam",
-    'url' => "https://steamcommunity.com/id/apiontek/",
     'prof' => false,
     'target' => "_blank"
   ),
@@ -77,7 +77,7 @@ function social_icons_str($icons_arr) {
   $out_str = '<div id="social-icons">';
   foreach ($icons_arr as $i=>$social) {
     $pad = $i == 0 ? 'pe-1' : ($i == (count($icons_arr) - 1) ? 'ps-1' : 'px-1');
-    $out_str .= '<a href="' . $social['url'] . '" rel="noreferrer" target="' . $social['target'];
+    $out_str .= '<a href="' . $social['url'] . '" rel="me noopener noreferrer" target="' . $social['target'];
     $out_str .= '" class="fs-3 link-light text-decoration-none ' . $pad . '">';
     $out_str .= inline_svg($social['icon'], array( 'div_class' => 'icon baseline' ) ) . "</a>";
   }

@@ -24,6 +24,7 @@ namespace WP_73k;
   <meta name="author" content="Adam Piontek"/>
   <link rel="me" href="mailto:adam@73k.us"/>
   <link rel="me" href="sms:+16462341697"/>
+  <link rel="me" href="https://kolektiva.social/@adampiontek"/>
   <link rel="authorization_endpoint" href="https://indieauth.com/auth"/>
 
   <link rel="preload" href="<?php echo get_stylesheet_directory_uri() . '/dist/fonts/righteous-latin-400-normal.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
