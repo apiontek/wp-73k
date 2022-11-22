@@ -52,7 +52,7 @@ $social_icons = array(
     'target' => "_blank"
   ),
   array(
-    'icon' => "mdi-discord",
+    'icon' => "svg-discord",
     'url' => "https://discordapp.com/users/328583977629646848",
     'prof' => false,
     'target' => "_blank"

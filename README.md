@@ -14,7 +14,7 @@ The WordPress theme for 73k.us, based on Bootstrap 5 and PurgeCSS.
 3. Run `composer install`
 4. Run `npm install` 
 5. Set environment variables for BrowserSyncPlugin to the domain/ports you need (see `webpack.config.js` for variables needed).
-6. Run `npm start` to begin development server.
+6. Run `npm watch` to start webpack watching ot output updated assets.
 
 ## Webpack
 The theme uses Webpack as its bundler with ES6 modules for JavaScript files.

@@ -28,8 +28,8 @@ import "../../node_modules/@mdi/svg/svg/goodreads.svg";
 import "../../node_modules/@mdi/svg/svg/twitter.svg";
 import "../../node_modules/@mdi/svg/svg/facebook.svg";
 import "../../node_modules/@mdi/svg/svg/instagram.svg";
-import "../../node_modules/@mdi/svg/svg/steam.svg";
-import "../../node_modules/@mdi/svg/svg/discord.svg";
+import "../../node_modules/@mdi/svg/svg/mastodon.svg";
+import "../raw/discord.svg";
 
 // Import Bootstrap JS
 import 'bootstrap/js/dist/collapse';
