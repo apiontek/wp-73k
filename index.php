@@ -18,8 +18,8 @@ get_header(); ?>
         // If a user has filled out their description, show a bio on their entries.
         if ( get_the_author_meta( 'description' ) ) { ?>
         <div id="author-info" class="d-flex flex-row mb-4 tek-border-bottom-gray-dashed">
-          <div id="author-avatar" class="flex-shrink-0 me-3 pt-1">
-            <?php echo get_avatar( get_the_author_meta( 'user_email' ), $size = '96', $default = '', $alt = '', $args = array( 'class' => 'rounded-3' )); ?>
+          <div id="author-avatar" class="flex-shrink-0">
+            <?php echo get_avatar( get_the_author_meta( 'user_email' ), $size = '96', $default = '', $alt = '', $args = array( 'class' => 'rounded-3 me-3 pt-1' )); ?>
           </div><!-- #author-avatar -->
           <div id="author-description" class="flex-grow-1 mb-2">
             <h1 class="text-muted fst-italic mb-0"><?php printf( __( 'Author: %s', '' ), get_the_author() ); ?></h1>
