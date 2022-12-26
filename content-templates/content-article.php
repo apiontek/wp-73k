@@ -32,8 +32,13 @@ namespace WP_73k;
 
     <div class="post-date font-monospace text-muted <?php echo (has_tag() ? '' : 'mb-3'); ?>">
       <?php 
+        if (is_author()) {
+          $the_author = get_the_author();
+        } else {
+          $the_author = get_the_author_posts_link();
+        }
         echo inline_svg( 'mdi-calendar-clock', array( 'div_class' => 'icon baseline me-2' ) ) . get_the_date('F j, Y');
-        echo ' by ' . inline_svg( 'mdi-account', array( 'div_class' => 'icon baseline me-1' ) ) . get_the_author();
+        echo ' by ' . inline_svg( 'mdi-account', array( 'div_class' => 'icon baseline me-1' ) ) . $the_author;
       ?>
     </div>
 
